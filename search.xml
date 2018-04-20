@@ -3,10 +3,31 @@
   
     
     <entry>
+      <title>本博客的创建流程</title>
+      <link href="/2018/04/20/create-blog/"/>
+      <url>/2018/04/20/create-blog/</url>
+      <content type="html"><![CDATA[<p>表达想法、总结新知识、收录技术问题的解决方案、记录一些繁琐的流程（比如像本篇一样的教程类文章）……写博客是一个非常好的途径。成熟的博客平台有很多，但偶尔还会看到有些写作者拥有自己的博客网站。作为技术人员，我特别好奇他们是怎么做到的。<br><a id="more"></a><br>2016年初我尝试用 <code>阿里云主机 + wordpress</code> 搭建过个人博客，并更新过大半年，写了一些东西。后来接触到云服务器，我很喜欢，开始用它鼓捣各种技术，不惜放弃我的博客。</p><p>用GitHub生成个人主页，特别简单，我很早就玩过，所以王晓洋给我推荐搭建博客的方法时，我看到他提到了GitHub，就完全没有在意（虽然我回复他说“厉害厉害”）。前几天突然想起来，又去问他那个框架名字，找了几个帖子把新博客搭了出来。使用很满意。我把搭建流程记录一下。</p><p><strong>需要用到的：</strong></p><table><thead><tr><th>技术</th><th>描述</th></tr></thead><tbody><tr><td><strong>markdown</strong></td><td><code>编写博文样式要用的语言</code></td></tr><tr><td><strong>GitHub</strong></td><td><code>博客代码和内容的托管平台</code></td></tr><tr><td><strong>Git</strong></td><td><code>把本地内容发布到GitHub的工具</code></td></tr><tr><td><strong>Node.js</strong></td><td><code>服务器语言</code></td></tr><tr><td><strong>hexo</strong></td><td><code>著名的博客框架</code></td></tr></tbody></table><p>运营个人博客，最基本的技术储备：</p><ul><li><p>markdown语法</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- hexo常用命令</span><br><span class="line"> </span><br><span class="line">```如何安装插件、生成文章、部署到GitHub</span><br></pre></td></tr></table></figure></li></ul><h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3>]]></content>
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>体检</title>
       <link href="/2018/04/17/body/"/>
       <url>/2018/04/17/body/</url>
-      <content type="html"><![CDATA[<p>上周日我去做了一次体检。我把预约过程，针对体检结果的分析，平时要注意的事项，记录一下。没有体检过、想体检的人，这篇文章应该可以作为指引……</p><a id="more"></a><blockquote><p>预约过程待续……</p></blockquote><p><strong>一些要注意的问题</strong></p><ul><li>不能老是熬夜。23点之前休息，6点起来。</li><li>要适当运动，快走或慢跑，提高免疫力。</li><li>多饮水，适当服用苏打水，多吃瓜果蔬菜。</li><li>饮食清淡，忌辛辣。少吃动物内脏。</li><li>春秋注意保暖，外出戴口罩，避免干冷空气刺激。</li><li>减少使用手机、电脑的时间，多做颈部运动。</li></ul><p><strong>接下来准备做的</strong></p><ul><li>买个跳绳，每天至少运动半小时，减重。</li><li>本周去一次口腔医院，学习刷牙知识。</li></ul><blockquote><p>未完待续</p></blockquote>]]></content>
+      <content type="html"><![CDATA[<p>上周日我去做了一次体检。我把预约过程，针对体检结果的分析，平时要注意的事项，记录一下。没有体检过、想体检的人，这篇文章应该可以作为指引。<br><a id="more"></a></p><blockquote><p>预约过程待续……</p></blockquote><p><strong>一些要注意的问题</strong></p><ul><li>不能老是熬夜。23点之前休息，6点起来。</li><li>要适当运动，快走或慢跑，提高免疫力。</li><li>多饮水，适当服用苏打水，多吃瓜果蔬菜。</li><li>饮食清淡，忌辛辣。少吃动物内脏。</li><li>春秋注意保暖，外出戴口罩，避免干冷空气刺激。</li><li>减少使用手机、电脑的时间，多做颈部运动。</li></ul><p><strong>接下来准备做的</strong></p><ul><li>买个跳绳，每天至少运动半小时，减重。</li><li>本周去一次口腔医院，学习刷牙知识。</li></ul><blockquote><p>未完待续</p></blockquote>]]></content>
       
       <categories>
           
