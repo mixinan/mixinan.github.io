@@ -747,10 +747,10 @@ pre {
 /* syntax highlight*/
 figure.highlight,
 .codeblock {
-  background: #f7f8f8;
+  background: #032b2b;
   margin: 10px 0;
   line-height: 1.1em;
-  color: #333;
+  color: #e1f151;
   padding-top: 15px;
   overflow: hidden; }
   figure.highlight table,
