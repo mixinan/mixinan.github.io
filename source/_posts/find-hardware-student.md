@@ -1,5 +1,5 @@
 ---
-title: 寻找懂硬件的在读学员
+title: 寻找懂硬件的学员
 date: 2018-02-10 17:36:33
 tags: 硬件
 categories: 杂文
