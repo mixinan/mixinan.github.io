@@ -10,6 +10,8 @@ categories: 教程
 
 <!-- more -->
 
+---
+
 ## 安装 ubuntu 系统
 
     安装 vmware

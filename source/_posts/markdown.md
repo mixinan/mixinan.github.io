@@ -7,6 +7,8 @@ categories: 教程
 本篇罗列了一些最基本的markdown语法
 <!--more-->
 
+---
+
 ### 简介
 
 markdown文件的后缀为 “.md” 或者 “.markdown”。新建文件 “readme.md”，用记事本就可以编辑了。GitHub里项目的说明文档，就是 readme.md 或 readme.markdown. 有些IT博客平台支持用 markdown 编写文章。程序员用它比较多，甚至可以说是程序员专用写作语言。 

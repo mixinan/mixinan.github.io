@@ -9,6 +9,8 @@ categories: 教程
 这是 ubuntu1305 的 vim 配置信息。我比较习惯这种风格，特此保存。
 <!-- more -->
 
+---
+
 set nu
 syntax on
 set guifont=DejaVu\ Sans\ Mono\ 12

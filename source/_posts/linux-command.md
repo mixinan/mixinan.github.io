@@ -6,6 +6,8 @@ tags: Linux
 使用Linux系统，第一件事当然是学Linux命令。本篇罗列了一些基本命令。
 <!--more-->
 
+---
+
 ## 文件
 - 创建 touch
 ```

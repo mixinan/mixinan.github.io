@@ -9,6 +9,8 @@ categories: 教程
 
 <!-- more -->
 
+---
+
 ## Ubuntu
 
 [在 VMWare 的 Ubuntu 中设置共享文件夹](https://blog.csdn.net/klq6743/article/details/78838080)

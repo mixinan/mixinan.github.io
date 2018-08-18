@@ -9,6 +9,8 @@ tags: apk
 
 <!--more-->
 
+---
+
 ## 注册
 
 可以在论坛留手机号，让热心锤友帮忙邀请你注册。或点击 [评论一下](http://2hao.cc/things/pinglun.php?id=97) 留言，我来邀请你。
