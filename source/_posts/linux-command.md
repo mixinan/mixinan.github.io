@@ -1,26 +1,48 @@
 title: Linux基本命令
 date: 2018-04-19 08:30:00
-categories: 教程
-tags: Linux
 ---
 使用Linux系统，第一件事当然是学Linux命令。本篇罗列了一些基本命令。
 <!--more-->
 
 ---
 
+## 列出内容 ls
+
+> ( list 列表、列出 )
+
+常用的选项：
+
+```shell
+-A  (all，显示所有，包含隐藏内容)  
+-s  (size，显示内容的大小)
+-l  (long，显示长格式，详细信息)
+-r  (reverse，倒序排列)
+-S  (sort=size，按大小排列)
+-t  (time，按最后修改时间排列)
+```
+
+选项可以组合使用：
+
+```shell
+ ls  -lt
+ ls  -lS
+ ls  -lr
+ ```
+ 
+
 ## 文件
 - 创建 touch
-```
-    用法：touch a.txt
+```shell
+    touch  a.txt
     touch  a.txt  b.txt  c.txt
 ```
 - 删除 rm
-```
-    用法：rm a.txt
+```shell
+    rm a.txt
     rm a.txt b.txt c.txt
 ```
 - 查看文本内容 
-```
+```shell
     cat 查看全部
     用法：cat a.txt
 
@@ -38,15 +60,12 @@ tags: Linux
 ```
 ## 文件夹
 - 创建 mkdir
-```
-    用法：mkdir music
-
+```shell
+    mkdir  music
     mkdir  music  movie  picture
 ```
 - 删除 rm -r
-```
-    用法：rm -r music
-
+```shell
+    rm -r  music
     rm -r  music movie  picture
 ```
-> 未完待续
