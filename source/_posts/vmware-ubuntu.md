@@ -1,6 +1,6 @@
 ---
 title: vmware-ubuntu
-date: 2018-08-02 14:11:24
+date: 2018-08-02 14:11
 ---
 使用 vmware 虚拟机，安装 ubuntu 系统的流程及可能出现的问题。
 
