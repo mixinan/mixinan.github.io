@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="万码千钧">
 <meta property="og:description" content="预科班笔记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T09:38:07.787Z">
+<meta property="og:updated_time" content="2019-07-30T09:41:22.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1907预科班笔记">
 <meta name="twitter:description" content="预科班笔记">
@@ -467,17 +467,12 @@
 <p>建表时指定存储引擎<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create  table 表名 (</span><br><span class="line">  name char(10)</span><br><span class="line">) engine=innodb;</span><br></pre></td></tr></table></figure></p>
 <p>MYISAM 存储引擎特点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">支持表级锁</span><br><span class="line">不支持外键、事务、事务回滚</span><br><span class="line">表文件个数</span><br><span class="line">表名.frm   表名.MYD  表名.MYI</span><br><span class="line">表结构      数据           index信息</span><br></pre></td></tr></table></figure></p>
 <p>INNODB 存储引擎特点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">支持外键 </span><br><span class="line">支持行级锁</span><br><span class="line">支持事务和事务回滚</span><br><span class="line">表文件个数 </span><br><span class="line">表名.frm  t6.ibd</span><br><span class="line">表结构     数据+index信息</span><br></pre></td></tr></table></figure></p>
-<p>事务回滚</p>
-<blockquote>
-<p>在访问过程中，任意一步操作失败，恢复之前的所有操作</p>
-</blockquote>
+<p>事务回滚：<br>在访问过程中，任意一步操作失败，恢复之前的所有操作</p>
 <p>工作中建表时，如何决定表使用那种存储引擎？</p>
-<blockquote>
-<p>select 操作多的表，适合使用myisam存储引擎，节省系统资源</p>
-</blockquote>
-<blockquote>
-<p>insert/update/delete 操作多的表，适合使用innodb存储引擎，并发访问量大</p>
-</blockquote>
+<ul>
+<li>select 操作多的表，适合使用myisam存储引擎，节省系统资源</li>
+<li>insert/update/delete 操作多的表，适合使用innodb存储引擎，并发访问量大</li>
+</ul>
 <p>练习<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">库名：words</span><br><span class="line">表名：t18（innodb引擎、utf8）</span><br><span class="line">字段：</span><br><span class="line">name  varchar(20)</span><br><span class="line">age   int</span><br><span class="line">score   int</span><br><span class="line"></span><br><span class="line">表结构修改为：</span><br><span class="line">id   int   主键   自增长</span><br><span class="line">age</span><br><span class="line">score</span><br><span class="line">name</span><br><span class="line">引擎：myisam</span><br><span class="line"></span><br><span class="line">添加 3 条数据</span><br><span class="line"></span><br><span class="line">把数据库 words 备份为  /root/words.sql</span><br><span class="line">先退出数据库</span><br><span class="line">mysqldump   -uroot   words  &gt;  /root/words.sql</span><br></pre></td></tr></table></figure></p>
 <p>克隆一台虚拟机<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clone-vm7</span><br><span class="line">输入虚拟机编号</span><br><span class="line"></span><br><span class="line">帐号：root</span><br><span class="line">密码：123456</span><br></pre></td></tr></table></figure></p>
 <p>设置 ip 地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmcli  connection  modify  eth0   ipv4.method    manual ipv4.addresses    192.168.4.50/24     connection.autoconnect  yes</span><br><span class="line"></span><br><span class="line">nmcli  connection  up  eth0</span><br><span class="line"></span><br><span class="line">查看 eth0 的 ip 地址</span><br><span class="line">ifconfig   eth0</span><br></pre></td></tr></table></figure></p>
