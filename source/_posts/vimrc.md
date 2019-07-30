@@ -1,10 +1,6 @@
 ---
 title: vimrc_ubuntu1305
 date: 2018-08-04 14:52:11
-tags: 
-    - ubuntu
-    - vimrc
-categories: 教程
 ---
 这是 ubuntu1305 的 vim 配置信息。我比较习惯这种风格，特此保存。
 <!-- more -->

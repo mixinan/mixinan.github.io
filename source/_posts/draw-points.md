@@ -1,8 +1,6 @@
 ---
 title: 在页面画100个随机点
 date: 2018-05-24 16:31:46
-tags: canvas
-categories: 教程
 ---
 使用 canvas 在页面上绘制100个随机生成的点
 

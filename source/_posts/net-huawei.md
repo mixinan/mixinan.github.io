@@ -327,6 +327,9 @@ S5700交换机配置
 [Huawei]interface Vlanif 4
 [Huawei-Vlanif4]ip address  192.168.4.1 24
 
+//查看配置过的ip情况
+display  ip  interface  brief
+
 [Huawei]interface GigabitEthernet 0/0/1
 [Huawei-GigabitEthernet0/0/1] port link-type trunk
 [Huawei-GigabitEthernet0/0/1] port trunk allow-pass vlan all

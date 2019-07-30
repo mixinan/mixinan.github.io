@@ -1,8 +1,6 @@
 ---
 title: markdown常用语法
 date: 2018-04-20 09:00:00
-tags: markdown
-categories: 教程
 ---
 本篇罗列了一些最基本的markdown语法
 <!--more-->

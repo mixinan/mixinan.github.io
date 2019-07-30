@@ -1,8 +1,6 @@
 ---
 title: 关于
 date: 2016-06-30 19:38:38
-tags: 关于
-categories: 杂文
 ---
 
 这是我的 Blog 客户端。
