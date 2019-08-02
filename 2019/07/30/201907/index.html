@@ -111,8 +111,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2019/07/30/201907/" data-id="cjyu962up003fkovawogt63uu"
-         class="article-share-link">Share</a>
+
+      <!-- <a data-url="http://blog.2hao.cc/2019/07/30/201907/" data-id="cjyub7dk7003f2wvawh6qeaf5"
+         class="article-share-link">分享</a> -->
+         
       
     </footer>
 
@@ -124,7 +126,7 @@
     
     
       <a href="/2019/07/26/1907pre/" class="article-nav-link">
-        <strong class="article-nav-caption">Olde posts</strong>
+        <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">1907预科班笔记</div>
       </a>
     
@@ -135,6 +137,26 @@
 
   
     
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd34565d0ec049d74c68b',
+      clientSecret: 'd0f190072707caa5f634da9adc931f2f0b352416',
+      repo: 'https://mixinan.github.io',
+      owner: 'mixinan',
+      admin: ['mixinan'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
   
 
 </article>
@@ -166,31 +188,31 @@
 <nav class="navbar">
   
     <div class="logo">
-      <a href="/"><img src="/images/hexo.svg" alt="万码千钧"></a>
+      <a href="/"><img src="/favicon.ico" alt="万码千钧"></a>
     </div>
   
   <ul class="nav nav-main">
     
       <li class="nav-item">
-        <a class="nav-item-link" href="/">Home</a>
+        <a class="nav-item-link" href="/">主页</a>
       </li>
     
       <li class="nav-item">
-        <a class="nav-item-link" href="/archives">Archives</a>
+        <a class="nav-item-link" href="/archives">归档</a>
       </li>
     
       <li class="nav-item">
-        <a class="nav-item-link" href="/gallery">Gallery</a>
+        <a class="nav-item-link" href="/gallery">相册</a>
       </li>
     
       <li class="nav-item">
-        <a class="nav-item-link" href="/about">About</a>
+        <a class="nav-item-link" href="/about">作者</a>
       </li>
     
     <li class="nav-item">
       <a class="nav-item-link nav-item-search" title="搜索">
         <i class="fe fe-search"></i>
-        Search
+        搜索
       </a>
     </li>
   </ul>
@@ -204,10 +226,6 @@
 </div>
     </li>
     <li class="nav-item">
-      
-        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-          <i class="fe fe-feed"></i>
-        </a>
       
     </li>
   </ul>
