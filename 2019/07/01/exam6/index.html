@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="万码千钧,郭兴楠,mixinan">
+  
+  
+    <meta name="description" content="郭兴楠的个人博客。学如逆水行舟，不进则退。主动出击！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    web第三阶段月考 |
+    
+    万码千钧</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-exam6" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      web第三阶段月考
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/07/01/exam6/" class="article-date">
+  <time datetime="2019-07-01T12:05:00.000Z" itemprop="datePublished">2019-07-01  20:05</time>
+</a>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>JavaScript 阶段的月考题</p>
+<a id="more"></a>
+<hr>
+<p>　<br>1、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = 2;  </span><br><span class="line">var b = 2&lt;&lt;4;  </span><br><span class="line">console.log(b);</span><br><span class="line"></span><br><span class="line">上述代码的输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A.8  B.32  C.16  D.0</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B</p>
+<p>　<br>2、【单选题】现需要使用 jQuery 的方式实现 AJAX 调用：服务器资源为 server.php，使用 post 的方式发送数据“this is a ajax”到服务器端，并将服务器端返回的文本弹出显示。下列选项中，能实现上述需求的是（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">A.</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: &quot;server.php&quot;,</span><br><span class="line">    type: &quot;post&quot;,</span><br><span class="line">    send: &quot;this is ajax&quot;,</span><br><span class="line">    success: function (data) &#123;</span><br><span class="line">        alert(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">B.</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    open: &quot;server.php&quot;,</span><br><span class="line">    type: &quot;post&quot;,</span><br><span class="line">    send: &quot;this is ajax&quot;,</span><br><span class="line">    success: function (data) &#123;</span><br><span class="line">        alert(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: &quot;server.php&quot;,</span><br><span class="line">    type: &quot;post&quot;,</span><br><span class="line">    data: &quot;this is ajax&quot;,</span><br><span class="line">    success: function (data) &#123;</span><br><span class="line">        alert(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    open: &quot;server.php&quot;,</span><br><span class="line">    type: &quot;post&quot;,</span><br><span class="line">    data: &quot;this is ajax&quot;,</span><br><span class="line">    success: function (data) &#123;</span><br><span class="line">        alert(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>3、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var a = &quot;205.1&quot;;</span><br><span class="line">var b = 2;</span><br><span class="line">console.log(b + a);</span><br><span class="line">console.log(isNaN(b + a));</span><br><span class="line"></span><br><span class="line">上述代码的输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A. 207.1   和 false </span><br><span class="line">B. 207.1   和 true </span><br><span class="line">C. 2205.1  和 false </span><br><span class="line">D. 2205.1  和 true</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C</p>
+<p>　</p>
+<p>4、【单选题】下述HTTP响应状态码与其默认的原因短句的匹配中，错误的是（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. 503 - Service Unavailable </span><br><span class="line">B. 404 - Internal Server Error </span><br><span class="line">C. 301 - Moved Permanently </span><br><span class="line">D. 200 - OK</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B</p>
+<p>5、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function testFunc(data) &#123;</span><br><span class="line">    data = data + &quot;200&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var data = 100;</span><br><span class="line">console.log(data);</span><br><span class="line">testFunc(data);</span><br><span class="line">console.log(data);</span><br><span class="line"></span><br><span class="line">上述代码执行后，输出结果为（）。</span><br><span class="line"></span><br><span class="line">A. 先输出100，再输出100 </span><br><span class="line">B. 先输出100，再输出100200 </span><br><span class="line">C. 程序错误 </span><br><span class="line">D. 先输出100，再输出300</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A
+　</p>
+<p>6、【单选题】有如下HTML代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;form&gt;</span><br><span class="line">        &lt;input id=&quot;count&quot; type=&quot;number&quot; step=&quot;2&quot; min=&quot;0&quot; max=&quot;20&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">有如下JavaScript代码：</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;</span><br><span class="line">    var quantity = document.getElementById(&quot;count&quot;);</span><br><span class="line">    quantity.onblur = function()&#123;</span><br><span class="line">        if(quantity.validity.空白处1    )&#123;</span><br><span class="line">            quantity.setCustomValidity(&quot;值无效，需要偶数值&quot;);</span><br><span class="line">        &#125;else if(quantity.validity.空白处2     )&#123;</span><br><span class="line">            quantity.setCustomValidity(&quot;最小值为2&quot;);</span><br><span class="line">        &#125;else if(quantity.validity.空白处3     )&#123;</span><br><span class="line">            quantity.setCustomValidity(&quot;最大值为20&quot;);</span><br><span class="line">        &#125;else if(quantity.validity.customError)&#123;</span><br><span class="line">            quantity.setCustomValidity(&quot;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">现需要实现，用户单击“提交”按钮时，校验文本框中的录入，并按照js代码中的文本进行校验提示。</span><br><span class="line">下列选项中，能按顺序分别填入横线空白处的正确代码是（）。</span><br><span class="line"> </span><br><span class="line">A. stepMismatch、 rangeUnderflow 和 rangeOverflow </span><br><span class="line">B. stepMismatch、 rangeOverflow 和 rangeUnderflow </span><br><span class="line">C. typeMismatch、 rangeUnderflow 和 rangeOverflow </span><br><span class="line">D. typeMismatch、 rangeOverflow 和 rangeUnderflow</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A</p>
+<p>7、【单选题】html 页面上有一个 id 为 b1 的按钮，现需要使用 JavaScript 代码为其定义单击事件：单击该按钮后，弹出“js”。下列选项中，错误的是（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">A.</span><br><span class="line">document.getElementById(&quot;b1&quot;).onclick = function() &#123; </span><br><span class="line">    alert(&quot;js&quot;); </span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">B. </span><br><span class="line">document.getElementById(&quot;b1&quot;).onclick = clickFunc;</span><br><span class="line">function clickFunc() &#123;</span><br><span class="line">     alert(&quot;js&quot;);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">document.getElementById(&quot;b1&quot;).onclick = new function()&#123; </span><br><span class="line">    alert(&quot;js&quot;); </span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">document.getElementById(&quot;b1&quot;).onclick = new Function(&quot;alert(js); &quot;);</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>8、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var num = 10;</span><br><span class="line">if (num &gt; 20)</span><br><span class="line">    console.log(num);</span><br><span class="line">    console.log(&quot;num的值小于20&quot;);</span><br><span class="line"></span><br><span class="line">上述代码执行后，输出结果为（）。</span><br><span class="line"> </span><br><span class="line">A.先输出10，再输出“num的值小于20” </span><br><span class="line">B.没有输出 </span><br><span class="line">C.输出“num的值小于20” </span><br><span class="line">D.程序错误</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】C
+　</p>
+<p>9、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var a = 20;</span><br><span class="line">var b = &quot;2&quot;;</span><br><span class="line">var c = (a+1)/b;</span><br><span class="line">document.write(c);</span><br><span class="line"></span><br><span class="line">上述代码的输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A. 10 </span><br><span class="line">B. (20+1)/2 </span><br><span class="line">C. 11 </span><br><span class="line">D. 10.5</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】D
+　</p>
+<p>10、【单选题】<br>有 html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;msg&quot;&gt;通知：&lt;span&gt;消息&lt;/span&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">还有 JavaScript 代码如下：</span><br><span class="line"></span><br><span class="line">var p = document.getElementById(&apos;msg&apos;);</span><br><span class="line">console.log( p.nodeValue );</span><br><span class="line">console.log( p.textContent ); </span><br><span class="line"></span><br><span class="line">上述代码的输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A.先输出“通知：”，再输出“通知：消息” </span><br><span class="line">B.先输出“通知：”，再输出“&lt;span&gt;消息&lt;/span&gt;” </span><br><span class="line">C.先输出null，再输出“消息” </span><br><span class="line">D.先输出 null，再输出“通知：消息”</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】D
+　</p>
+<p>11、【单选题】<br>在处理应答过程中，如果我们要处理XML文档，我们需要在参数列表中放置XMLHttpRequest对象的什么属性（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.xhr.requestXML </span><br><span class="line">B.xhr.requestText </span><br><span class="line">C.xhr.responseXML </span><br><span class="line">D.xhr.responseText</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】C
+　</p>
+<p>12、【单选题】<br>有 html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;a&gt;login&lt;/a&gt;</span><br><span class="line">    &lt;div id=&quot;news&quot;&gt;</span><br><span class="line">        &lt;a&gt;新闻标题1&lt;/a&gt;</span><br><span class="line">        &lt;a class=&quot;current&quot;&gt;新闻标题2&lt;/a&gt;</span><br><span class="line">        &lt;a&gt;新闻标题3&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">还有 JavaScript 代码如下：</span><br><span class="line"></span><br><span class="line">var div = document.querySelector(&apos;#news&apos;);</span><br><span class="line">var aNodes = div.querySelectorAll(&apos;a&apos;);</span><br><span class="line">console.log(aNodes.length);</span><br><span class="line">var node = div.querySelector(&apos;a.current&apos;);</span><br><span class="line">console.log(node.innerHTML);</span><br><span class="line"></span><br><span class="line">上述代码的输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A.先输出 4，再输出 null </span><br><span class="line">B.先输出 3，再输出 null </span><br><span class="line">C.先输出 3，再输出“新闻标题2” </span><br><span class="line">D.先输出 4，再输出“新闻标题2”</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】C
+　</p>
+<p>13、【单选题】<br>假设今天是2006年4月1日星期六,请问以下javascript代码输出结果是(   )<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var time = new Date( );</span><br><span class="line">document.write(time.getDate( ));</span><br><span class="line"> </span><br><span class="line">A.6 </span><br><span class="line">B.2006 </span><br><span class="line">C.4 </span><br><span class="line">D.1</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】D
+　</p>
+<p>14、【单选题】<br>Web项目中，服务器页面为了实现国际化，必需客户端浏览器提交下列哪个请求头（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.Accept-Language </span><br><span class="line">B.Content-Type </span><br><span class="line">C.Content-Language </span><br><span class="line">D.Accept-Charset</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A
+　</p>
+<p>15、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var x = 200;</span><br><span class="line">var y = &quot;100&quot;;</span><br><span class="line">var a = x + y + true;</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">上述代码执行后，变量 a 的值是（）。</span><br><span class="line"></span><br><span class="line">A.200100true </span><br><span class="line">B.Undefined </span><br><span class="line">C.301 </span><br><span class="line">D.300true</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A
+　</p>
+<p>16、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var datas = [10,20,30];</span><br><span class="line">datas.unshift(40,50);</span><br><span class="line">datas.pop();</span><br><span class="line">datas.push(60,70);</span><br><span class="line">datas.shift();</span><br><span class="line">console.log(datas.toString());</span><br><span class="line"></span><br><span class="line">执行后的结果是（）。</span><br><span class="line"></span><br><span class="line">A.50,10,20,60,70 </span><br><span class="line">B.40,10,20,60,70 </span><br><span class="line">C.10,20,30 </span><br><span class="line">D.50,10,20,60</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A
+　</p>
+<p>17、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var arr = [97, 85, 79, 90];</span><br><span class="line">for (var i = 0; i &lt; arr.length-1; i++) &#123;</span><br><span class="line">    if (arr[i] &gt; arr[i+1]) &#123;</span><br><span class="line">        var temp = arr[i];</span><br><span class="line">        arr[i] = arr[i+1];</span><br><span class="line">        arr[i+1] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(arr);</span><br><span class="line"></span><br><span class="line">上述代码执行后，输出结果为（）。</span><br><span class="line"> </span><br><span class="line">A.[97, 85, 79, 90] </span><br><span class="line">B.[79, 85, 90, 97] </span><br><span class="line">C.[85, 79, 90, 97] </span><br><span class="line">D.以上都不对</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】C
+　</p>
+<p>18、【单选题】<br>下列关于C/S与B/S应用的描述中，错误的是（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. 一般来说，C/S应用的部署实施和维护比B/S应用更加方便，费用更低。 </span><br><span class="line">B. 历史上C/S应用比B/S应用出现的更早；但B/S相较于C/S的优势正在日益凸显。 </span><br><span class="line">C. C/S指Client-Server，这样的应用程序服务器和客户端一般都需要安装一个专用的程序。 </span><br><span class="line">D. B/S指Browser-Server，这样的应用程序服务器需要一款专用的程序，而客户端只需要使用浏览器即可。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A
+　</p>
+<p>19、【单选题】<br>查看如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var x = &quot;10&quot;;</span><br><span class="line">function f1( x )&#123;</span><br><span class="line">    x = x+2;</span><br><span class="line">    return x;</span><br><span class="line">&#125;</span><br><span class="line">console.log(x);</span><br><span class="line">x = f1(x);</span><br><span class="line">console.log(x);</span><br><span class="line"></span><br><span class="line">执行后的结果是（）。</span><br><span class="line"></span><br><span class="line">A.10 和 102 </span><br><span class="line">B.10 和 10 </span><br><span class="line">C.undefined 和 102 </span><br><span class="line">D.10 和 12</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A
+　</p>
+<p>20、【单选题】<br>有如下JavaScript 和 Html代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    function saveData()&#123;</span><br><span class="line">        sessionStorage.setItem(&apos;naruto&apos;,&apos;Uzumaki Naruto&apos;);</span><br><span class="line">        sessionStorage.setItem(&apos;kakashi&apos;,&apos;Hatake Kakashi&apos;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function getAllData()&#123;</span><br><span class="line">        var len=sessionStorage.length;</span><br><span class="line">        for(var i=0;i&lt;len;i++)&#123;</span><br><span class="line">            var key=sessionStorage.key(i);</span><br><span class="line">            alert(sessionStorage.getItem(key));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function clearData()&#123;</span><br><span class="line">        sessionStorage.removeItem(&apos;uname&apos;);</span><br><span class="line">        sessionStorage.clear();</span><br><span class="line">        alert(sessionStorage.length);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; value=&quot;Click&quot; onclick=&quot;saveData()&quot; /&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; value=&quot;Get Data&quot; onclick=&quot;getAllData()&quot; /&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; value=&quot;Clear Data&quot; onclick=&quot;clearData()&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">页面加载完成直接点击Get Data按钮，弹出的结果是（）。</span><br><span class="line"></span><br><span class="line">A. 不弹出任何东西 </span><br><span class="line">B. 弹出null </span><br><span class="line">C. 先弹出 Hatake Kakashi ， 然后弹出 Uzumaki Naruto </span><br><span class="line">D. 只弹出Hatake Kakashi</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A
+　</p>
+<p>21、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function f1( )&#123;</span><br><span class="line">	console.log(x);</span><br><span class="line">	var x = 10;</span><br><span class="line">	++x;</span><br><span class="line">	console.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f1();</span><br><span class="line"></span><br><span class="line">执行后的结果是（）。</span><br><span class="line"> </span><br><span class="line">A.程序错误 </span><br><span class="line">B.undefined 和 10 </span><br><span class="line">C.10 和 11 </span><br><span class="line">D.undefined 和 11</span><br></pre></td></tr></table></figure>
+<p>【正确答案】D
+　</p>
+<p>22、【单选题】<br>下列JSON格式的数据中，哪些是语法正确的（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. &apos;&#123;ename:&quot;Tom&quot;, salary:5000&#125;&apos; </span><br><span class="line">B. &apos;[&quot;ename&quot;:&quot;Tom&quot;, &quot;salary&quot;:5000]&apos; </span><br><span class="line">C. &apos;&#123;&quot;ename&quot;:&quot;Tom&quot;, &quot;salary&quot;:5000&#125;&apos; </span><br><span class="line">D. &apos;&#123;ename=&quot;Tom&quot;, salary=5000&#125;&apos;</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>23、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var index = 0;</span><br><span class="line">var arr = [97, 85, 97, 90, 85];</span><br><span class="line"></span><br><span class="line">for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    if (arr[i] == 85) &#123;</span><br><span class="line">        index = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(index);</span><br><span class="line"></span><br><span class="line">上述代码执行后，输出结果为（）。</span><br><span class="line"></span><br><span class="line">A. 4 </span><br><span class="line">B. 以上都不对 </span><br><span class="line">C. 1 </span><br><span class="line">D. 0</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A
+　</p>
+<p>24、【单选题】<br>查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr = [ [ 11, 12, 13 ], [ 21 ], [ 31, 32] ];</span><br><span class="line">console.log( arr[1][1] );</span><br><span class="line">console.log( arr[2][1] );</span><br><span class="line"></span><br><span class="line">执行后的结果是（）:</span><br><span class="line"> </span><br><span class="line">A. 11 和 21 </span><br><span class="line">B. undefined 和 32 </span><br><span class="line">C. 程序错误 </span><br><span class="line">D. 21 和 31</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B
+　</p>
+<p>25、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function triangle(num) &#123;</span><br><span class="line">    var result = [[1], [1, 1]];</span><br><span class="line">    for (var i = 2; i &lt; num; i++) &#123;</span><br><span class="line">        result.push([1]);</span><br><span class="line">        for (var j = 1; j &lt; i; j++) &#123;</span><br><span class="line">            result[i][j] = result[i - 1][j - 1] + result[i - 1][j];</span><br><span class="line">        &#125;</span><br><span class="line">        result[i][i] = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var arr = triangle(5);</span><br><span class="line">console.log(arr[4].toString());</span><br><span class="line"></span><br><span class="line">上述代码运行后，输出结果是（）。</span><br><span class="line"> </span><br><span class="line">A. 1,3,3,1 </span><br><span class="line">B. 以上都不对 </span><br><span class="line">C. 1,4,6,4,1 </span><br><span class="line">D. 1,5,10,10,5,1</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>26、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function A() &#123;</span><br><span class="line">    this.name = &quot;a&quot;;</span><br><span class="line">    this.introduce = function () &#123; </span><br><span class="line">        console.log(&quot;My name is &quot; + this.name) </span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">function B() &#123;</span><br><span class="line">    this.name = &quot;b&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">var a1 = new A();</span><br><span class="line">var b1 = new B();</span><br><span class="line">a1.introduce.call(b1);</span><br><span class="line"></span><br><span class="line">上述代码运行后，输出结果为（）。</span><br><span class="line"></span><br><span class="line">A. 输出 My name is b </span><br><span class="line">B. 输出 My name is a </span><br><span class="line">C. 程序错误 </span><br><span class="line">D. 输出 My name is undefined</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A</p>
+<p>　</p>
+<p>27、【单选题】有下述JS代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var i = 0;</span><br><span class="line">var sum = 0;</span><br><span class="line"></span><br><span class="line">do&#123;</span><br><span class="line">    i++;</span><br><span class="line">    if( i%2 === 0)&#123;</span><br><span class="line">        continue;</span><br><span class="line">    &#125;</span><br><span class="line">    if( i%5 === 0)&#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">    sum += i;</span><br><span class="line">&#125;while( i&lt;10 );</span><br><span class="line"></span><br><span class="line">console.log( &apos;sum=&apos; + sum );</span><br><span class="line"></span><br><span class="line">其运行结果应该是下列哪项（）。</span><br><span class="line"> </span><br><span class="line">A. sum=0 </span><br><span class="line">B. sum=4 </span><br><span class="line">C. sum=Infinity </span><br><span class="line">D. 死循环</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B</p>
+<p>28、【单选题】页面上有 id 为 c1 的 <code>&lt;canvas&gt;</code> 元素，现需要实现，在 <code>&lt;canvas&gt;</code> 元素区域，绘制一个线性渐变的矩形。该矩形为边长100的正方形，最左侧为红色，最右侧为蓝色，颜色从左向右横向线性渐变。有JavaScript 代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&quot;c1&quot;).getContext(&quot;2d&quot;);</span><br><span class="line">var grad=canvas.空白处1;</span><br><span class="line">grad.addColorStop(0,&apos;red&apos;);</span><br><span class="line">grad.addColorStop(1,&apos;blue&apos;);</span><br><span class="line">canvas.fillStyle = grad;</span><br><span class="line">canvas.空白处2;</span><br><span class="line"></span><br><span class="line">为实现所需效果，下列选项中，能按顺序分别填入横线空白处的正确代码是（）。</span><br><span class="line"></span><br><span class="line">A. createLinearGradient(0,0,0,100)和 strokeRect(0,0,100,100); </span><br><span class="line">B. createLinearGradient(0,0,100,0)和 fillRect(0,0,100,100); </span><br><span class="line">C. createLinearGradient(0,0,100,100)和 fillRect(0,0,100,100); </span><br><span class="line">D. createLinearGradient(0,0,100,100)和 strokeRect(0,0,100,100);</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B
+　</p>
+<p>29、【单选题】查看如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function f1( )&#123;</span><br><span class="line">	console.log(x);</span><br><span class="line">	x=x+1;</span><br><span class="line">	var x = 10;</span><br><span class="line">	console.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f1();</span><br><span class="line"></span><br><span class="line">上述代码执行后，输出结果为（）。</span><br><span class="line"> </span><br><span class="line">A. 程序错误 </span><br><span class="line">B. 10和11 </span><br><span class="line">C. undefined 和 10 </span><br><span class="line">D. null 和 10</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>30、【单选题】<br>下述脚本代码，需要在页面实现了一个数字时钟，空白处脚本依次填写（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var vID;</span><br><span class="line">    window.onload = function () &#123;</span><br><span class="line">        空白处</span><br><span class="line">    &#125;;       </span><br><span class="line">    window.onunload = function () &#123;</span><br><span class="line">        空白处</span><br><span class="line">    &#125;;</span><br><span class="line">    function addFunc() &#123;</span><br><span class="line">        var v = new Date();</span><br><span class="line">        document.getElementById(&quot;mySpan&quot;).innerHTML = v.toLocaleTimeString();</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"> </span><br><span class="line">A.</span><br><span class="line">vID = window.setDateTime(addFunc, 1000);</span><br><span class="line">window.clearDateTime(vID);</span><br><span class="line"> </span><br><span class="line">B.</span><br><span class="line">vID = window.setTimer(addFunc, 1000);</span><br><span class="line">window.clearTimer(vID);</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">vID = window.setInterval(addFunc, 1000);</span><br><span class="line">window.clearInterval(vID);</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">vID = window. setTimeout(addFunc, 1000);</span><br><span class="line">window.clearTimeout(vID);</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C
+　</p>
+<p>31、【多选题】下列有关JavaScript和PHP的表述中正确的是（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A. JavaScript和PHP中的数据类型是相同的。</span><br><span class="line"> </span><br><span class="line">B. 一个Web项目中，JavaScript一般用作客户端脚本，控制HTML页面的行为；PHP一般用作服务器端脚本，用于动态的创建网页内容。</span><br><span class="line"> </span><br><span class="line">C. JavaScript和PHP都是弱类型语言，声明变量时都无需指定类型，一个变量也可以先后赋值为不同类型的值。</span><br><span class="line"> </span><br><span class="line">D. JavaScript和PHP中都有“函数”和“对象”概念，都可以使用“面向过程”和“面向对象”的方式编程。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】B,C,D
+　</p>
+<p>32、【多选题】下列变量名中，哪些是非法的（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. class </span><br><span class="line">B. $_myVar </span><br><span class="line">C. 2myVar </span><br><span class="line">D. myVar2_</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,C
+　</p>
+<p>33、【多选题】假设使用mysqli_query() 函数若执行了一条 SELECT 语句，对于其返回值的下述说法中，错误的有（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A. mysqli_fetch_array() 函数可以试着向数据库申请结果集中的下一行记录，若不存在更多可读数据了，则返回 NULL；所以若结果集中可能存在多行记录，可以使用形如 while( $row=mysqli_fetch_array($result) )&#123; &#125;的循环操作读取所有记录行。</span><br><span class="line"> </span><br><span class="line">B. 若 SELECT 语句执行失败，则返回 false。</span><br><span class="line"> </span><br><span class="line">C. 若 SELECT 语句执行成功，则立即返回查询到的所有记录行。</span><br><span class="line"> </span><br><span class="line">D. 返回值中初始是不包含任何记录行的，必须调用 mysqli_fetch_array() 等类似的函数向数据库申请读取查得的记录行；正如函数名所示，调用该函数一次即可以读取到所有的记录行。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】C,D
+　</p>
+<p>34、【多选题】<br>PHP可以如何处理JSON字符串数据（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.PHP中可以使用JSON.parse()方法把JSON字符串解析为PHP对象或数组。 </span><br><span class="line">B.PHP中可以使用json_decode()函数把JSON字符串解析为PHP对象或数组。 </span><br><span class="line">C.PHP中可以使用json_encode()函数把PHP数组或对象格式化为JSON字符串。 </span><br><span class="line">D.PHP中可以使用JSON.stringify()方法把PHP数组或对象格式化为JSON字符串。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】B,C
+　</p>
+<p>35、【多选题】<br>现需要创建一个普通按钮，其文本为“new button”，单击该按钮时，弹出文本“Hello”。下列选项中，正确的是（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">A.</span><br><span class="line">var obj = document.createElement(&quot;input&quot;);</span><br><span class="line">obj.setAttribute(&quot;type&quot;, &quot;button&quot;);</span><br><span class="line">obj.setAttribute(&quot;value&quot;,&quot;new button&quot;);</span><br><span class="line">obj.setAttribute(&quot;onclick&quot;, &quot;alert(&apos;Hello&apos;);&quot;);</span><br><span class="line"> </span><br><span class="line">B.</span><br><span class="line">var obj = document.createElement(&quot;input&quot;);</span><br><span class="line">obj.setAttribute(&quot;type&quot;, &quot;button&quot;);</span><br><span class="line">obj.innerHTML = &quot;new button&quot;;</span><br><span class="line">obj.setAttribute(&quot;onclick&quot;, &quot;alert(&apos;Hello&apos;);&quot;);</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">var obj = document.createElement(&quot;input&quot;);</span><br><span class="line">obj.setAttribute(&quot;type&quot;, &quot;button&quot;);</span><br><span class="line">obj.innerHTML = &quot;new button&quot;;</span><br><span class="line">obj.onclick = function () &#123; alert(&quot;Hello&quot;); &#125;;</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">var obj = document.createElement(&quot;input&quot;);</span><br><span class="line">obj.setAttribute(&quot;type&quot;, &quot;button&quot;);</span><br><span class="line">obj.setAttribute(&quot;value&quot;,&quot;new button&quot;);</span><br><span class="line">obj.onclick = function () &#123; alert(&quot;Hello&quot;); &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,D
+　</p>
+<p>36、【多选题】<br>下列有关HTTPS协议的描述中正确的是（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A. HTTPS协议是在应用层和传输层之间添加一个消息加密层（SSL或TLS层），负责请求和响应消息的加密和解密。</span><br><span class="line"> </span><br><span class="line">B. 使用HTTPS协议通信的服务器和客户端，在建立连接后，双方必须先初识化消息加密层，交换秘钥，之后才能开始普通消息传递。</span><br><span class="line"> </span><br><span class="line">C. HTTPS协议默认端口为443。</span><br><span class="line"> </span><br><span class="line">D. HTTPS协议在实际应用中，服务器必须向客户端出示可信的数字证书，否则客户端会认为此次连接是不安全的；同时，客户端也必须向服务器出示自己的数字证书。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,B,C
+　</p>
+<p>37、【多选题】<br>有 JavaScript 代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function createXmlDoc(xmlFile) &#123;</span><br><span class="line">    var xmlDoc = null;</span><br><span class="line">    if (window.DOMParser) &#123;</span><br><span class="line">        var parser = new DOMParser();</span><br><span class="line">        xmlDoc = parser.parseFromString(xmlFile, &quot;application/xml&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        xmlDoc = new ActiveXObject(&quot;Microsoft.XMLDOM&quot;);</span><br><span class="line">        xmlDoc.async = &quot;false&quot;;</span><br><span class="line">        xmlDoc.load(xmlFile);</span><br><span class="line">    &#125;</span><br><span class="line">    return xmlDoc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function testFunc() &#123;</span><br><span class="line">    var xmlDoc = createXmlDoc(&quot;&lt;bookstore&gt;&lt;name age=&apos;18&apos;&gt;King&lt;/name&gt;&lt;/bookstore&gt;&quot;);</span><br><span class="line">    var value = xmlDoc.getElementsByTagName(&quot;name&quot;)[0].空白处1;</span><br><span class="line">    var age = xmlDoc.getElementsByTagName(&quot;name&quot;)[0].空白处2;</span><br><span class="line">    alert(value + &quot;:&quot; + age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">现需要读取代码中 XML 数据中的 king 和 18，并弹出显示。</span><br><span class="line">下面选项中，能够按照顺序分别填入横线空白处的代码是（）:</span><br><span class="line"> </span><br><span class="line">A. nodeValue 和 attributes[&quot;age&quot;].value </span><br><span class="line">B. nodeValue 和 attributes[0].value </span><br><span class="line">C. firstChild.nodeValue 和 attributes[&quot;age&quot;].value </span><br><span class="line">D. childNodes[0].nodeValue 和 attributes[0].value</span><br></pre></td></tr></table></figure>
+<p>【正确答案】C,D</p>
+<p>38、【多选题】<br>有如下JS代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var empAge = 20;</span><br><span class="line">var empName;</span><br><span class="line"></span><br><span class="line">则下列选项中哪些不会发生执行错误（）。</span><br><span class="line"> </span><br><span class="line">A. if( empAge &gt; 20 &amp;&amp; empName.length &gt; 0 ) console.log(); </span><br><span class="line">B. if( empAge &gt;= 20 || empName.length &gt; 0 ) console.log(); </span><br><span class="line">C. if( empAge &gt;= 20 &amp;&amp; empName.length &gt; 0 ) console.log(); </span><br><span class="line">D. if( empAge &gt; 20 || empName.length &gt; 0 ) console.log();</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,B</p>
+<p>　</p>
+<p>39、【多选题】<br>关于SQL和MySQL的说法正确的有哪些（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. SQL全称Structured Query Language，是MySQL数据库专用的操作语言，其它RDBMS无法使用。 </span><br><span class="line">B. SQL语句分为四类：DDL、DML、DQL、DCL。 </span><br><span class="line">C. MySQL脚本文件中，可以使用//和/**/两种注释。 </span><br><span class="line">D. MySQL命令行环境中，可以使用source命令执行一个脚本文件中的所有SQL语句。</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】B,D</p>
+<p>　</p>
+<p>40、【多选题】<br>下列有关for(;;)循环和for(in)循环的表述中，错误的有（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. for(in)循环可以遍历对象中的每个成员; </span><br><span class="line">B. for(;;)循环可以遍历对象中的每个成员; </span><br><span class="line">C. for(in)循环可以遍历关联数组（如下标为字符串的数组）中的每个元素; </span><br><span class="line">D. for(;;)循环可以遍历关联数组（如下标为字符串的数组）中的每个元素;</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】B,D
+　</p>
+<p>41、【多选题】<br>有服务器端的 1.php 页面的代码如下所示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo &apos;aaa(&#123;&quot;name&quot;:19&#125;);&apos;;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">同时有 html 页面,和 1.php 页面位于不同的域。有 JavaScript 代码如下所示:</span><br><span class="line"></span><br><span class="line">function showFunc(data) &#123; </span><br><span class="line">    alert(data.name); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: &quot;http://localhost:8888/1.php&quot;,</span><br><span class="line">    type: &quot;get&quot;,</span><br><span class="line">         空白处1     ,</span><br><span class="line">    jsonCallback:     空白处2     </span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line">现需要实现跨域调用服务器端的 1.php 页面,使用方法 showFunc 作为回调函数,并弹出显示服务器端的返回结果。</span><br><span class="line">下列选项中,可以按顺序分别填入横线空白处的正确代码是（）。</span><br><span class="line"> </span><br><span class="line">A. data: &quot;jsonp&quot; 和 &apos;showFunc&apos; </span><br><span class="line">B. dataType: &quot;jsonp&quot; 和 &apos;showFunc&apos; </span><br><span class="line">C. dataType: &quot;jsonp&quot; 和 showFunc </span><br><span class="line">D. data: &quot;jsonp&quot; 和 showFunc&apos;</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B,C
+　</p>
+<p>42、【多选题】<br>下列消息头中哪些是请求专用头（即不能用于响应消息）（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. Cache-Control  </span><br><span class="line">B. User-Agent   </span><br><span class="line">C. Host   </span><br><span class="line">D. Referer</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】B,C,D
+　</p>
+<p>43、【多选题】<br>项目中的数据的保存可以采用哪些方式（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. 使用自定义文件，永久保存在应用程序服务器所在的文件系统中; </span><br><span class="line">B. 使用格式化的文件（如Excel），永久保存在文件系统中;</span><br><span class="line">C. 临时数据，可以保存在内存中; </span><br><span class="line">D. 使用数据库，永久保存在数据库管理系统中;</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,B,C,D
+　</p>
+<p>44、【多选题】<br>下列选项中，用于实现文本绘制的属性的是（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. font </span><br><span class="line">B. fontStyle </span><br><span class="line">C. textAlign </span><br><span class="line">D. textBaseline</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A,C,D
+　</p>
+<p>45、【多选题】<br>下列哪些选项中的语句可以查找出一个数组中的最大值（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">A.</span><br><span class="line">var max = arr[0] ; </span><br><span class="line">for( var i=0; i&lt;arr.length; i++ )&#123; </span><br><span class="line">    max = arr[i] &gt; max ?  arr[i] : max;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">B.</span><br><span class="line">var max = arr[0] ; </span><br><span class="line">for( var i in arr )&#123; </span><br><span class="line">    max = arr[i] &gt; max ?  arr[i] : max;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">var max = arr[0] ; </span><br><span class="line">var i = 0;</span><br><span class="line">while( i &lt; arr.length )&#123;</span><br><span class="line">max = arr[i] &gt; max ?  arr[i] : max;</span><br><span class="line">    		   i++;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">var max = arr[0] ; </span><br><span class="line">for( var i in arr )&#123; </span><br><span class="line">    max = i &gt; max ? i : max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A,B,C
+　</p>
+<p>46、【多选题】<br>有变量 obj 表示页面上的某个元素。现需要设置该元素在页面上不可见。<br>下列选项中，正确的是（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. obj.style.display = &quot;none&quot;; </span><br><span class="line">B. obj.style.width = 0; </span><br><span class="line">C. obj.style.opacity = 0; </span><br><span class="line">D. obj.style.visibility = &quot;hidden&quot;;</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A,C,D
+　</p>
+<p>47、【多选题】<br>有代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;script src=&quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(function()&#123;</span><br><span class="line">            $(&quot;ul li&quot;).each(function(i)&#123;</span><br><span class="line">                if(i % 2 == 0)&#123;</span><br><span class="line">                    $(this).css(&quot;background-color&quot;,&quot;red&quot;);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    $(this).css(&quot;border&quot;,&quot;1px solid blue&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;Java企业级开发&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;Web前端&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;Php研发工程师&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;网络工程师&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;Android开发工程师&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">下列选项中，能实现和上述代码相同效果的是（）。</span><br><span class="line"> </span><br><span class="line">A.</span><br><span class="line">$(&quot;li:odd&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span><br><span class="line">$(&quot;li:even&quot;).css(&quot;border&quot;,&quot;1px solid blue&quot;);</span><br><span class="line"> </span><br><span class="line">B.</span><br><span class="line">$(&quot;li:even&quot;).css(&quot;background-color&quot;,&quot;red&quot;); </span><br><span class="line">$(&quot;li:odd&quot;).css(&quot;border&quot;,&quot;1px solid blue&quot;);</span><br><span class="line"> </span><br><span class="line">C.</span><br><span class="line">$(&quot;ul&quot;).children().each(function()&#123;</span><br><span class="line">    if($(&quot;ul&quot;).children().index(this) % 2 == 0)&#123;</span><br><span class="line">        $(this).css(&quot;background-color&quot;,&quot;red&quot;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        $(this).css(&quot;border&quot;,&quot;1px solid blue&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">D.</span><br><span class="line">$(ul li:odd).css(&quot;background-color&quot;,&quot;red&quot;);</span><br><span class="line">$(ul li:even).css(&quot;border&quot;,&quot;1px solid blue&quot;);</span><br></pre></td></tr></table></figure>
+<p>【正确答案】B,C
+　</p>
+<p>48、【多选题】<br>关于函数下列说法正确的是（）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. 函数其实是保存代码段的引用类型的对象； </span><br><span class="line">B. 函数名其实仅是一个普通的变量； </span><br><span class="line">C. 函数名通过函数对象的地址引用着函数对象； </span><br><span class="line">D. 函数不能同时被多个对象引用；</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,B,C
+　</p>
+<p>49、【多选题】<br>下列选项中，属于 <code>&lt;video&gt;</code> 元素的事件的是（）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.error </span><br><span class="line">B.ended </span><br><span class="line">C.pauseed</span><br><span class="line">D.play</span><br></pre></td></tr></table></figure></p>
+<p>【正确答案】A,B,D
+　</p>
+<p>50、【多选题】<br>下列哪些选项中的ECMAScript对象不能实例化（即不能使用new关键字创建新的实例）（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. Math </span><br><span class="line">B. Error </span><br><span class="line">C. Global </span><br><span class="line">D. Object</span><br></pre></td></tr></table></figure>
+<p>【正确答案】A,C</p>
+
+      
+    </div>
+    <footer class="article-footer">
+
+      <!-- <a data-url="http://blog.2hao.cc/2019/07/01/exam6/" data-id="cjzcrg7ga003ns0vap4b69c3g"
+         class="article-share-link">分享</a> -->
+         
+      
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+      <a href="/2019/07/23/about-Jay/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            周杰伦粉丝打榜事件
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2019/06/30/201906/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">2019年6月</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd34565d0ec049d74c68b',
+      clientSecret: 'd0f190072707caa5f634da9adc931f2f0b352416',
+      repo: 'mixinan.github.io',
+      owner: 'mixinan',
+      admin: ['mixinan'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Update: 2019-08-15
+      <li>Weibo: <a href="https://weibo.com/hejinfriend" target="_blank" style="text-decoration: none">万码千钧</a></li>
+      <li>QQ: 2070906030</li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/favicon.ico" alt="万码千钧"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">作者</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="请输入关键字...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<!-- <script src="/js/snap.svg-min.js"></script> -->
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+
+<!-- 
+  <script src="/js/search.js"></script>
+ -->
+
+
+</body>
+</html>

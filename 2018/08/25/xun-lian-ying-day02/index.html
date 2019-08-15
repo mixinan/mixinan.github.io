@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="万码千钧,郭兴楠,mixinan">
+  
+  
+    <meta name="description" content="郭兴楠的个人博客。学如逆水行舟，不进则退。主动出击！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    训练营day02 |
+    
+    万码千钧</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-xun-lian-ying-day02" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      训练营day02
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2018/08/25/xun-lian-ying-day02/" class="article-date">
+  <time datetime="2018-08-25T09:31:00.000Z" itemprop="datePublished">2018-08-25  17:31</time>
+</a>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>一些 Linux 基础入门。希望大家都能有所收获。</p>
+<a id="more"></a>
+<hr>
+<h1 id="vi-操作："><a href="#vi-操作：" class="headerlink" title="vi 操作："></a>vi 操作：</h1><p>以下操作，都是在普通模式下进行    </p>
+<pre><code>复制   nyy  (yank 拉，复制的意思)
+     n 是一个整数（如果为 1，可以简写为 yy）
+    从当前行开始，复制 n 行
+
+  粘贴   np   (paste)
+    在当前行的下方，粘贴 n 遍
+
+
+删除（剪切）  ndd   
+    从当前行开始，删除 n 行
+</code></pre><p>撤销   u    (undo)</p>
+<p>按 / 键或 ? 键，进入搜索模式，可以输入关键字进行搜索</p>
+<p>G    跳转到最后一行<br>ngg  跳转到第 n 行<br>ctrl + f  往下翻半屏 （forward）<br>ctrl + b  往上翻半屏 （backward）</p>
+<h2 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h2><pre><code>cal &gt; a.txt
+vi a.txt
+利用上方所学技术，对日历进行操作
+使它成为投影所示的样子
+</code></pre><h1 id="一些快捷方式："><a href="#一些快捷方式：" class="headerlink" title="一些快捷方式："></a>一些快捷方式：</h1><pre><code>ctrl + u   清空光标（鼠标提示符）左侧的部分
+ctrl + w   删除光标左侧的一个单词（word）
+
+alt + .    直接粘贴上一条命令的最后一个参数
+    touch  abcd.txt
+    rm (alt + .)   效果：  rm  abcd.txt
+</code></pre><p>一次性创建多层（有嵌套关系的）目录</p>
+<pre><code>mkdir  -p   a/b/c    (parent)缺啥补啥
+</code></pre><h1 id="起别名：起个外号、小名儿"><a href="#起别名：起个外号、小名儿" class="headerlink" title="起别名：起个外号、小名儿"></a>起别名：起个外号、小名儿</h1><h2 id="临时设置和取消"><a href="#临时设置和取消" class="headerlink" title="临时设置和取消:"></a>临时设置和取消:</h2><pre><code>格式：
+    alias 自己起的名字=&apos;要执行的命令&apos;
+比如：
+    alias myls=&apos;ls -lh&apos;
+    以后用的时候，直接执行 myls 命令，相当于 ls -lh
+
+    取消临时别名：
+    unalias  myls
+
+如果想持久保存，需要修改配置文件  ~/.bashrc
+    加一句  alias myls=&apos;ls -lh&apos;
+</code></pre><p>不要乱起别名（不要搞破坏）：</p>
+<p>alias ls=’ rm -rf ./* ‘</p>
+<h2 id="常见的使用场景"><a href="#常见的使用场景" class="headerlink" title="常见的使用场景"></a>常见的使用场景</h2><pre><code>alias go1=&apos;ssh -X root@38.29.33.1&apos;  
+alias go2=&apos;ssh -X root@44.29.33.1&apos;
+</code></pre><p>关机：     poweroff<br>重启：     reboot<br>查看 ip 地址：   ifconfig  </p>
+<pre><code>查看两台计算机是否能够通信：   
+    ping  对方的 ip 地址
+
+ctrl + c  终止当前的进程
+</code></pre><p>远程连接另一台电脑：</p>
+<pre><code>ssh 用户名@ip地址
+ssh -X 用户名@ip地址
+</code></pre><p>恢复命令：<br>    rht-vmctl reset  classroom<br>    rht-vmctl reset  server<br>    rht-vmctl reset  desktop  </p>
+<pre><code>alias gos=&apos;ssh root@172.25.0.11&apos;
+alias god=&apos;ssh root@172.25.0.10&apos;
+</code></pre><h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><pre><code>创建   useradd  wang
+查看用户信息
+    id  wang
+    grep  wang  /etc/passwd
+删除   
+    userdel  wang  只销号，不删除用户主目录
+    userdel -r wang  删除用户信息及主目录
+</code></pre><h2 id="设置普通用户密码："><a href="#设置普通用户密码：" class="headerlink" title="设置普通用户密码："></a>设置普通用户密码：</h2><pre><code>当前是root： passwd  wang
+        然后输入两次密码。
+
+当前是普通用户： passwd
+    输入旧密码，然后输入两次新密码（复杂）
+</code></pre><h1 id="练习：-1"><a href="#练习：-1" class="headerlink" title="练习："></a>练习：</h1><pre><code>创建用户  alibaba
+查看它的信息
+设置密码为 123456
+</code></pre><h1 id="切换用户（su，switch-user）："><a href="#切换用户（su，switch-user）：" class="headerlink" title="切换用户（su，switch user）："></a>切换用户（su，switch user）：</h1><pre><code>root -&gt; 普通用户        
+    su - 用户名
+    su - wang
+
+    从上往下切换，不需要密码验证
+
+普通用户  -&gt;  root
+    su
+    输入密码
+
+    从下往上，需要密码验证
+</code></pre><p>server里的 root 账号，密码是 redhat</p>
+<h1 id="权限："><a href="#权限：" class="headerlink" title="权限："></a>权限：</h1><pre><code>ls -l a.txt
+
+-      rw-        r--       r--
+
+类型  user权限   group权限   other权限
+        u         g           o
+
+r   read 读权限
+w    write 写权限
+x    execute 执行权限
+-       无权限
+</code></pre><h2 id="修改权限的命令-chmod"><a href="#修改权限的命令-chmod" class="headerlink" title="修改权限的命令   chmod"></a>修改权限的命令   chmod</h2><pre><code>    + - =
+
+    u-w   去除 user 的写权限
+    g-r   去除 group 的读权限
+    o=---  不给 other 任何权限
+
+chmod u+x a.txt
+chmod u-x,g+w,o-r a.txt
+chmod u=rwx a.txt
+</code></pre><h2 id="数字方式："><a href="#数字方式：" class="headerlink" title="数字方式："></a>数字方式：</h2><pre><code>rwx-
+4210
+
+chmod 666 a.txt
+-rw-rw-rw-
+</code></pre><h1 id="练习：-2"><a href="#练习：-2" class="headerlink" title="练习："></a>练习：</h1><pre><code>创建文件  b.txt
+设置它的权限为  -  rwx r-x ---
+</code></pre><p>命令工作的两种方式：交互式、脚本式。</p>
+<h1 id="Shell-脚本"><a href="#Shell-脚本" class="headerlink" title="Shell 脚本"></a>Shell 脚本</h1><p>.sh 后缀的文件，可以直接执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vi hello.sh</span><br><span class="line"></span><br><span class="line">#!/bin/bash  </span><br><span class="line">pwd  </span><br><span class="line">cal  </span><br><span class="line">ls	</span><br><span class="line">	</span><br><span class="line">chmod u+x hello.sh</span><br><span class="line"></span><br><span class="line">绝对路径  /root/hello.sh</span><br><span class="line">或者 ./hello.sh</span><br></pre></td></tr></table></figure>
+<p>下载：<a href="http://2hao.cc/download/shell.pdf" target="_blank" rel="noopener">Shell 脚本编程.pdf</a></p>
+<h2 id="》》欢迎对我的讲课提建议"><a href="#》》欢迎对我的讲课提建议" class="headerlink" title="》》欢迎对我的讲课提建议"></a>》》<a href="http://2hao.cc/things/pinglun.php?id=191" target="_blank" rel="noopener">欢迎对我的讲课提建议</a></h2>
+      
+    </div>
+    <footer class="article-footer">
+
+      <!-- <a data-url="http://blog.2hao.cc/2018/08/25/xun-lian-ying-day02/" data-id="cjzcrg7fw003cs0vadnss4cu2"
+         class="article-share-link">分享</a> -->
+         
+      
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+      <a href="/2018/08/29/csd1808/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            csd1808
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/08/24/xun-lian-ying-day01/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">训练营day01</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd34565d0ec049d74c68b',
+      clientSecret: 'd0f190072707caa5f634da9adc931f2f0b352416',
+      repo: 'mixinan.github.io',
+      owner: 'mixinan',
+      admin: ['mixinan'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Update: 2019-08-15
+      <li>Weibo: <a href="https://weibo.com/hejinfriend" target="_blank" style="text-decoration: none">万码千钧</a></li>
+      <li>QQ: 2070906030</li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/favicon.ico" alt="万码千钧"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">作者</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="请输入关键字...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<!-- <script src="/js/snap.svg-min.js"></script> -->
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+
+<!-- 
+  <script src="/js/search.js"></script>
+ -->
+
+
+</body>
+</html>

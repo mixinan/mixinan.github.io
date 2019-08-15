@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="万码千钧,郭兴楠,mixinan">
+  
+  
+    <meta name="description" content="郭兴楠的个人博客。学如逆水行舟，不进则退。主动出击！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    学员分享 |
+    
+    万码千钧</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-stu-share" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学员分享
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/03/02/stu-share/" class="article-date">
+  <time datetime="2019-03-02T02:00:00.000Z" itemprop="datePublished">2019-03-02  10:00</time>
+</a>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>汇总的一些学员分享内容</p>
+<a id="more"></a>
+<hr>
+<p>2-26<br>刚开始一两个月接触不到真实服务器，都是在测试机上搭建各种服务，如公司用到的 ftp 服务，公司内部的网站服务，自己在学习公司的各种技术手册，搭建文档等。后面开始操作线上服务器，不过权限比较小，能够管理的服务也少，要启动停止服务需要提权操作。</p>
+<p>后面 lnmp 平台架构都是我在管理，平时负责项目文档的编写，各个服务器的日志收集处理，使用 zabbix 监控每一台服务器，保证各种服务正常运行，对各种服务做高可用，比如网站服务器，如果一台坏掉了，可以自动切换到另一台，保证服务正常工作，平时也会配合其他部门完成一些项目，保证各部门正常工作。</p>
+<p>硬盘：有指示灯，绿色代表正常，红色代表已经坏了，黄色代表即将坏了，至于声音这一块，不同牌子的服务器提示声也不一样，具体看对应服务器的指导手册，其他硬件不容易出现问题。</p>
+<p>软故障：这个就不好弄了，不同服务有不同故障，对应服务解决，先看硬件有没有问题，再看网络，再看服务。</p>
+<p>网络问题：不是你该解决的，有网络运维在做。</p>
+<p>App 升级或上线：有两种方式，一种手动，一种自动。<br>手动就是开发人员每次写好的版本传给我们，我们将新版本部署到 web 服务器上；<br>第二种方式，需要用到 python+djekins 做自动化部署开发，开发人员写完版本，只需要上传到 github，djekins 会自动到 github 下载并部署到 web 服务器上。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+
+      <!-- <a data-url="http://blog.2hao.cc/2019/03/02/stu-share/" data-id="cjzcrg7eb002ds0vaifulicjj"
+         class="article-share-link">分享</a> -->
+         
+      
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+      <a href="/2019/03/05/tm-plan/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            教学部-轮值计划
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2019/03/01/201902/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">2019年2月</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd34565d0ec049d74c68b',
+      clientSecret: 'd0f190072707caa5f634da9adc931f2f0b352416',
+      repo: 'mixinan.github.io',
+      owner: 'mixinan',
+      admin: ['mixinan'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Update: 2019-08-15
+      <li>Weibo: <a href="https://weibo.com/hejinfriend" target="_blank" style="text-decoration: none">万码千钧</a></li>
+      <li>QQ: 2070906030</li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/favicon.ico" alt="万码千钧"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">作者</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="请输入关键字...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<!-- <script src="/js/snap.svg-min.js"></script> -->
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+
+<!-- 
+  <script src="/js/search.js"></script>
+ -->
+
+
+</body>
+</html>
