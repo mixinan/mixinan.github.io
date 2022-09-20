@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>对需求的理解 | 万码千钧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="昨天讲“正则表达式”时，遇到一个小问题。因为是在课堂上，我回答得比较匆忙，没细心研究。后来想了一下，发现我的解答是片面的。实现功能的前提是，正确理解需求。需求理解有误，结果就会大相径庭。昨天那个题目本身，有两个模棱两可的意思，导致对需求的理解不同，实现方式自然也就不相同了。正确的做法，是我针对题目的两种理解，分别讲解实现方式。因为在真正的工作中，需求是非常明确的，不会出现含糊不清的情况。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对需求的理解">
+<meta property="og:url" content="http://blog.2hao.cc/2018/10/20/xu-qiu-li-jie/index.html">
+<meta property="og:site_name" content="万码千钧">
+<meta property="og:description" content="昨天讲“正则表达式”时，遇到一个小问题。因为是在课堂上，我回答得比较匆忙，没细心研究。后来想了一下，发现我的解答是片面的。实现功能的前提是，正确理解需求。需求理解有误，结果就会大相径庭。昨天那个题目本身，有两个模棱两可的意思，导致对需求的理解不同，实现方式自然也就不相同了。正确的做法，是我针对题目的两种理解，分别讲解实现方式。因为在真正的工作中，需求是非常明确的，不会出现含糊不清的情况。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.2hao.cc/2018/10/20/xu-qiu-li-jie/xuqiulijie.jpg">
+<meta property="article:published_time" content="2018-10-20T03:11:00.000Z">
+<meta property="article:modified_time" content="2022-09-15T16:13:54.000Z">
+<meta property="article:author" content="mixinan">
+<meta property="article:tag" content="万码千钧">
+<meta property="article:tag" content="郭兴楠">
+<meta property="article:tag" content="mixinan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.2hao.cc/2018/10/20/xu-qiu-li-jie/xuqiulijie.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="万码千钧" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">万码千钧</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.2hao.cc"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-xu-qiu-li-jie" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/10/20/xu-qiu-li-jie/" class="article-date">
+  <time class="dt-published" datetime="2018-10-20T03:11:00.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      对需求的理解
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>昨天讲“正则表达式”时，遇到一个小问题。因为是在课堂上，我回答得比较匆忙，没细心研究。后来想了一下，发现我的解答是片面的。实现功能的前提是，正确理解需求。需求理解有误，结果就会大相径庭。昨天那个题目本身，有两个模棱两可的意思，导致对需求的理解不同，实现方式自然也就不相同了。正确的做法，是我针对题目的两种理解，分别讲解实现方式。因为在真正的工作中，需求是非常明确的，不会出现含糊不清的情况。</p>
+<span id="more"></span>
+
+<h1 id="题目：过滤不想要”oo”前面有-g-的"><a href="#题目：过滤不想要”oo”前面有-g-的" class="headerlink" title="题目：过滤不想要”oo”前面有 g 的"></a>题目：过滤不想要”oo”前面有 g 的</h1><p style="text-align:center;">
+    <img style="box-shadow:0 0 6px gray;" src="/2018/10/20/xu-qiu-li-jie/xuqiulijie.jpg">
+</p>
+
+<p>我们假设 x&#x3D;“不是 g 的其它单一字符”，针对题目本身这句话，可以有两种理解：  </p>
+<h2 id="1-筛选出“包含-xoo”的行"><a href="#1-筛选出“包含-xoo”的行" class="headerlink" title="1.筛选出“包含 xoo”的行"></a>1.筛选出“包含 xoo”的行</h2><h2 id="2-筛选出“包含-xoo，但不包含-goo”的行"><a href="#2-筛选出“包含-xoo，但不包含-goo”的行" class="headerlink" title="2.筛选出“包含 xoo，但不包含 goo”的行"></a>2.筛选出“包含 xoo，但不包含 goo”的行</h2><p>两种理解，会产生两种需求，实现方式也不一样。</p>
+<p>昨天有的人认为是第一种，有的人认为是第二种。</p>
+<p>我昨天被大家的争论带得反复跑偏，一会儿认为是第一种，一会儿认为是第二种，有点懵。汉语博大精深，理解成任意一种，感觉都对。</p>
+<h1 id="当我认为是第二种时："><a href="#当我认为是第二种时：" class="headerlink" title="当我认为是第二种时："></a>当我认为是第二种时：</h1><pre><code>grep -n &quot;[^g]oo&quot; regular_express.txt
+</code></pre>
+<p>结果：</p>
+<pre><code>2:apple is my favorite food.
+3:Football game is not use feet only.
+18:google is the best tools for search keyword.
+19:goooooogle yes!
+</code></pre>
+<p>这条命令呈现出来的结果有瑕疵，因为还是有“goo”出现：<br>第 18 行，出现了 google<br>第 19 行，出现了 goooooole</p>
+<p>我们甚至稀里糊涂聊到，正则表达式还是不够完美，还是有没考虑到的情况，它的开发人员需要在优先级方面再琢磨下。以目前的题目来看，作为用户，想要实现需求，可以使用下方命令的写法，就不会出现 goo 了：</p>
+<pre><code>grep -vn &quot;goo&quot; regular_express.txt | grep &quot;.oo&quot;
+</code></pre>
+<p>结果：</p>
+<pre><code>2:apple is my favorite food.
+3:Football game is not use feet only.
+</code></pre>
+<p>达到效果了，但又觉得这条命令的意义，和题目的需求也不是一回事。因为：</p>
+<h2 id="我又被你们带跑偏成第一种了……"><a href="#我又被你们带跑偏成第一种了……" class="headerlink" title="我又被你们带跑偏成第一种了……"></a>我又被你们带跑偏成第一种了……</h2><p>包含 xoo 的行，都显示出来了吗？并没有。</p>
+<p>第 18 行，有个 tools，其中 too 符合条件，为什么不显示？</p>
+<p>第 19 行，最后两个 o 的前面也不是 g，其中 ooo 符合条件，为什么也不显示？</p>
+<h2 id="在两种声音中来回打转。但当时并没有意识到，是题目本身有两种含糊不清的意思。"><a href="#在两种声音中来回打转。但当时并没有意识到，是题目本身有两种含糊不清的意思。" class="headerlink" title="在两种声音中来回打转。但当时并没有意识到，是题目本身有两种含糊不清的意思。"></a>在两种声音中来回打转。但当时并没有意识到，是题目本身有两种含糊不清的意思。</h2><hr>
+
+<p>看得出来，写那篇练习文档和答案的人，他是按第一种理解的。</p>
+<p>总之，不是正则表达式有 bug，而是我们把需求理解错啦，至少理解得不一致。这是语文问题，不是技术问题。大家肯为技术动脑筋、去争论，是一个非常好的现象。当然，在真正的工作中，需求都是非常明确的，想要实现什么功能，一清二楚，不会出现这样的理解问题。^_^</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.2hao.cc/2018/10/20/xu-qiu-li-jie/" data-id="cl8aib6al0034lq61aar5f9fj" data-title="对需求的理解" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/20/zheng-ze/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          正则表达式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/04/pm-plan/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">产品训练计划</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/21/20220920/">20220920</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/16/202209/">9月</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/08/goodbye-nanjing/">再见南京</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/30/201907/">2019年7月</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/24/clear-order/">数据库自动删除超时订单</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 mixinan<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

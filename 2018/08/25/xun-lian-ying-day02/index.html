@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>训练营day02 | 万码千钧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一些 Linux 基础入门。希望大家都能有所收获。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="训练营day02">
+<meta property="og:url" content="http://blog.2hao.cc/2018/08/25/xun-lian-ying-day02/index.html">
+<meta property="og:site_name" content="万码千钧">
+<meta property="og:description" content="一些 Linux 基础入门。希望大家都能有所收获。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-08-25T09:31:00.000Z">
+<meta property="article:modified_time" content="2022-09-15T16:13:54.000Z">
+<meta property="article:author" content="mixinan">
+<meta property="article:tag" content="万码千钧">
+<meta property="article:tag" content="郭兴楠">
+<meta property="article:tag" content="mixinan">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="万码千钧" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">万码千钧</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.2hao.cc"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-xun-lian-ying-day02" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/08/25/xun-lian-ying-day02/" class="article-date">
+  <time class="dt-published" datetime="2018-08-25T09:31:00.000Z" itemprop="datePublished">2018-08-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      训练营day02
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一些 Linux 基础入门。希望大家都能有所收获。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="vi-操作："><a href="#vi-操作：" class="headerlink" title="vi 操作："></a>vi 操作：</h1><p>以下操作，都是在普通模式下进行	</p>
+<pre><code>复制   nyy  (yank 拉，复制的意思)
+     n 是一个整数（如果为 1，可以简写为 yy）
+    从当前行开始，复制 n 行
+
+  粘贴   np   (paste)
+    在当前行的下方，粘贴 n 遍
+    
+    
+删除（剪切）  ndd   
+    从当前行开始，删除 n 行
+</code></pre>
+<p>撤销   u    (undo)</p>
+<p>按 &#x2F; 键或 ? 键，进入搜索模式，可以输入关键字进行搜索</p>
+<p>G    跳转到最后一行<br>ngg  跳转到第 n 行<br>ctrl + f  往下翻半屏 （forward）<br>ctrl + b  往上翻半屏 （backward）</p>
+<h2 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h2><pre><code>cal &gt; a.txt
+vi a.txt
+利用上方所学技术，对日历进行操作
+使它成为投影所示的样子
+</code></pre>
+<h1 id="一些快捷方式："><a href="#一些快捷方式：" class="headerlink" title="一些快捷方式："></a>一些快捷方式：</h1><pre><code>ctrl + u   清空光标（鼠标提示符）左侧的部分
+ctrl + w   删除光标左侧的一个单词（word）
+
+alt + .    直接粘贴上一条命令的最后一个参数
+    touch  abcd.txt
+    rm (alt + .)   效果：  rm  abcd.txt
+</code></pre>
+<p>一次性创建多层（有嵌套关系的）目录</p>
+<pre><code>    mkdir  -p   a/b/c    (parent)缺啥补啥
+
+    
+</code></pre>
+<h1 id="起别名：起个外号、小名儿"><a href="#起别名：起个外号、小名儿" class="headerlink" title="起别名：起个外号、小名儿"></a>起别名：起个外号、小名儿</h1><h2 id="临时设置和取消"><a href="#临时设置和取消" class="headerlink" title="临时设置和取消:"></a>临时设置和取消:</h2><pre><code>格式：
+    alias 自己起的名字=&#39;要执行的命令&#39;
+比如：
+    alias myls=&#39;ls -lh&#39;
+    以后用的时候，直接执行 myls 命令，相当于 ls -lh
+    
+    取消临时别名：
+    unalias  myls
+
+如果想持久保存，需要修改配置文件  ~/.bashrc
+    加一句  alias myls=&#39;ls -lh&#39;
+</code></pre>
+<p>不要乱起别名（不要搞破坏）：</p>
+<p>alias ls&#x3D;’ rm -rf .&#x2F;* ‘</p>
+<h2 id="常见的使用场景"><a href="#常见的使用场景" class="headerlink" title="常见的使用场景"></a>常见的使用场景</h2><pre><code>alias go1=&#39;ssh -X root@38.29.33.1&#39;  
+alias go2=&#39;ssh -X root@44.29.33.1&#39;
+</code></pre>
+<p>关机：     poweroff<br>重启：     reboot<br>查看 ip 地址：   ifconfig  </p>
+<pre><code>查看两台计算机是否能够通信：   
+    ping  对方的 ip 地址
+
+ctrl + c  终止当前的进程
+
+    
+</code></pre>
+<p>远程连接另一台电脑：</p>
+<pre><code>ssh 用户名@ip地址
+ssh -X 用户名@ip地址
+
+        
+</code></pre>
+<p>恢复命令：<br>    rht-vmctl reset  classroom<br>    rht-vmctl reset  server<br>    rht-vmctl reset  desktop  </p>
+<pre><code>alias gos=&#39;ssh root@172.25.0.11&#39;
+alias god=&#39;ssh root@172.25.0.10&#39;
+</code></pre>
+<h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><pre><code>创建   useradd  wang
+查看用户信息
+    id  wang
+    grep  wang  /etc/passwd
+删除   
+    userdel  wang  只销号，不删除用户主目录
+    userdel -r wang  删除用户信息及主目录
+</code></pre>
+<h2 id="设置普通用户密码："><a href="#设置普通用户密码：" class="headerlink" title="设置普通用户密码："></a>设置普通用户密码：</h2><pre><code>当前是root： passwd  wang
+        然后输入两次密码。
+
+当前是普通用户： passwd
+    输入旧密码，然后输入两次新密码（复杂）
+        
+        
+</code></pre>
+<h1 id="练习：-1"><a href="#练习：-1" class="headerlink" title="练习："></a>练习：</h1><pre><code>创建用户  alibaba
+查看它的信息
+设置密码为 123456
+</code></pre>
+<h1 id="切换用户（su，switch-user）："><a href="#切换用户（su，switch-user）：" class="headerlink" title="切换用户（su，switch user）："></a>切换用户（su，switch user）：</h1><pre><code>root -&gt; 普通用户        
+    su - 用户名
+    su - wang
+
+    从上往下切换，不需要密码验证
+
+普通用户  -&gt;  root
+    su
+    输入密码
+
+    从下往上，需要密码验证
+</code></pre>
+<p>server里的 root 账号，密码是 redhat</p>
+<h1 id="权限："><a href="#权限：" class="headerlink" title="权限："></a>权限：</h1><pre><code>ls -l a.txt
+
+-      rw-        r--       r--
+
+类型  user权限   group权限   other权限
+        u         g           o
+
+r   read 读权限
+w	write 写权限
+x	execute 执行权限
+-       无权限
+</code></pre>
+<h2 id="修改权限的命令-chmod"><a href="#修改权限的命令-chmod" class="headerlink" title="修改权限的命令   chmod"></a>修改权限的命令   chmod</h2><pre><code>    + - =
+
+    u-w   去除 user 的写权限
+    g-r   去除 group 的读权限
+    o=---  不给 other 任何权限
+
+chmod u+x a.txt
+chmod u-x,g+w,o-r a.txt
+chmod u=rwx a.txt
+</code></pre>
+<h2 id="数字方式："><a href="#数字方式：" class="headerlink" title="数字方式："></a>数字方式：</h2><pre><code>rwx-
+4210
+
+chmod 666 a.txt
+-rw-rw-rw-
+</code></pre>
+<h1 id="练习：-2"><a href="#练习：-2" class="headerlink" title="练习："></a>练习：</h1><pre><code>创建文件  b.txt
+设置它的权限为  -  rwx r-x ---
+                
+
+    
+</code></pre>
+<p>命令工作的两种方式：交互式、脚本式。</p>
+<h1 id="Shell-脚本"><a href="#Shell-脚本" class="headerlink" title="Shell 脚本"></a>Shell 脚本</h1><p>.sh 后缀的文件，可以直接执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vi hello.sh</span><br><span class="line"></span><br><span class="line">#!/bin/bash  </span><br><span class="line">pwd  </span><br><span class="line">cal  </span><br><span class="line">ls	</span><br><span class="line">	</span><br><span class="line">chmod u+x hello.sh</span><br><span class="line"></span><br><span class="line">绝对路径  /root/hello.sh</span><br><span class="line">或者 ./hello.sh</span><br><span class="line">			</span><br></pre></td></tr></table></figure>
+<p>下载：<a target="_blank" rel="noopener" href="http://2hao.cc/download/shell.pdf">Shell 脚本编程.pdf</a></p>
+<h2 id="》》欢迎对我的讲课提建议"><a href="#》》欢迎对我的讲课提建议" class="headerlink" title="》》欢迎对我的讲课提建议"></a>》》<a target="_blank" rel="noopener" href="http://2hao.cc/things/pinglun.php?id=191">欢迎对我的讲课提建议</a></h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.2hao.cc/2018/08/25/xun-lian-ying-day02/" data-id="cl8aib6al0037lq61ez8x6pld" data-title="训练营day02" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/29/csd1808/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          csd1808
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/24/xun-lian-ying-day01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">训练营day01</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/21/20220920/">20220920</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/16/202209/">9月</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/08/goodbye-nanjing/">再见南京</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/30/201907/">2019年7月</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/24/clear-order/">数据库自动删除超时订单</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 mixinan<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
