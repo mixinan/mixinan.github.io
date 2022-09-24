@@ -13,16 +13,16 @@
 <meta property="og:site_name" content="万码千钧">
 <meta property="og:description" content="华为交换机、路由器的使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_01.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_02.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_03.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_04.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_05.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_06.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day03_01.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day03_02.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day03_03.png">
-<meta property="og:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day03_04.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_01.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_02.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_03.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_04.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_05.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day02_06.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day03_01.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day03_02.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day03_03.png">
+<meta property="og:image" content="http://blog.2hao.cc/net-huawei/day03_04.png">
 <meta property="article:published_time" content="2019-06-13T07:29:00.000Z">
 <meta property="article:modified_time" content="2022-09-20T18:15:37.280Z">
 <meta property="article:author" content="万码千钧">
@@ -30,7 +30,7 @@
 <meta property="article:tag" content="郭兴楠">
 <meta property="article:tag" content="mixinan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.2hao.cc/2019/06/13/net-huawei/day02_01.png">
+<meta name="twitter:image" content="http://blog.2hao.cc/net-huawei/day02_01.png">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -129,11 +129,11 @@
 <p><strong>在交换机中查看MAC地址表</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]display mac-address</span><br><span class="line"></span><br><span class="line">MAC address table of slot 0:</span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">MAC Address    VLAN/       PEVLAN CEVLAN Port            Type      LSP/LSR-ID  </span><br><span class="line">               VSI/SI                                              MAC-Tunnel  </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">5489-987d-68c4 1           -      -      Eth0/0/1        dynamic   0/-         </span><br><span class="line">5489-9806-61a2 1           -      -      Eth0/0/2        dynamic   0/-           </span><br><span class="line">-------------------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
 
-<h1 id="day02：vlan-虚拟局域网"><a href="#day02：vlan-虚拟局域网" class="headerlink" title="day02：vlan 虚拟局域网"></a>day02：vlan 虚拟局域网</h1><h2 id="案例1：划分VLAN"><a href="#案例1：划分VLAN" class="headerlink" title="案例1：划分VLAN"></a>案例1：划分VLAN</h2><p><img src="/2019/06/13/net-huawei/day02_01.png" alt="图-1"></p>
+<h1 id="day02：vlan-虚拟局域网"><a href="#day02：vlan-虚拟局域网" class="headerlink" title="day02：vlan 虚拟局域网"></a>day02：vlan 虚拟局域网</h1><h2 id="案例1：划分VLAN"><a href="#案例1：划分VLAN" class="headerlink" title="案例1：划分VLAN"></a>案例1：划分VLAN</h2><p><img src="/net-huawei/day02_01.png" alt="图-1"></p>
 <p>默认情况下所有接口都在 VLAN1 中，且 VLAN1 默认就存在，所以只需配置 VLAN2 和 VLAN3</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]vlan batch 2 3        //创建VLAN2、VLAN3</span><br><span class="line"></span><br><span class="line">[Huawei]port-group 1</span><br><span class="line">[Huawei-port-group-1]group-member Ethernet0/0/3 Ethernet0/0/4</span><br><span class="line">[Huawei-port-group-1]port link-type access </span><br><span class="line">[Huawei-port-group-1]port default vlan 2     </span><br><span class="line"></span><br><span class="line">[Huawei-port-group-1]quit</span><br><span class="line"></span><br><span class="line">[Huawei]port-group 2</span><br><span class="line">[Huawei-port-group-2]group-member Ethernet0/0/5 Ethernet0/0/6</span><br><span class="line">[Huawei-port-group-2]port link-type access </span><br><span class="line">[Huawei-port-group-2]port default vlan 3  </span><br></pre></td></tr></table></figure>
 
-<h2 id="案例2：多交换机VLAN的划分"><a href="#案例2：多交换机VLAN的划分" class="headerlink" title="案例2：多交换机VLAN的划分"></a>案例2：多交换机VLAN的划分</h2><p><img src="/2019/06/13/net-huawei/day02_02.png" alt="图-2"></p>
+<h2 id="案例2：多交换机VLAN的划分"><a href="#案例2：多交换机VLAN的划分" class="headerlink" title="案例2：多交换机VLAN的划分"></a>案例2：多交换机VLAN的划分</h2><p><img src="/net-huawei/day02_02.png" alt="图-2"></p>
 <p><strong>步骤(在案例1的基础上)</strong></p>
 <p>S1配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface Ethernet0/0/7</span><br><span class="line">[Huawei-Ethernet0/0/7] port link-type access</span><br><span class="line">[Huawei-Ethernet0/0/7] port default vlan 3</span><br></pre></td></tr></table></figure>
@@ -141,7 +141,7 @@
 <p>S2配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]vlan 3            //创建VLAN3</span><br><span class="line"></span><br><span class="line">[Huawei]port-group 1</span><br><span class="line">[Huawei-port-group-1]group-member Ethernet0/0/5 to Ethernet0/0/7</span><br><span class="line">[Huawei-port-group-1]port link-type access </span><br><span class="line">[Huawei-port-group-1]port default vlan 3    </span><br></pre></td></tr></table></figure>
 
-<h2 id="案例3：配置trunk中继链路"><a href="#案例3：配置trunk中继链路" class="headerlink" title="案例3：配置trunk中继链路"></a>案例3：配置trunk中继链路</h2><p><img src="/2019/06/13/net-huawei/day02_03.png" alt="图-3"></p>
+<h2 id="案例3：配置trunk中继链路"><a href="#案例3：配置trunk中继链路" class="headerlink" title="案例3：配置trunk中继链路"></a>案例3：配置trunk中继链路</h2><p><img src="/net-huawei/day02_03.png" alt="图-3"></p>
 <p><strong>步骤(在案例2的基础上)</strong></p>
 <p>S1配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface Ethernet0/0/7</span><br><span class="line">[Huawei-Ethernet0/0/7]port default vlan 1  //还原配置</span><br><span class="line"></span><br><span class="line">[Huawei-Ethernet0/0/7]port link-type trunk</span><br><span class="line">[Huawei-Ethernet0/0/1]port trunk allow-pass vlan all</span><br></pre></td></tr></table></figure>
@@ -149,26 +149,26 @@
 <p>S2配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]vlan 2         //创建VLAN2</span><br><span class="line"></span><br><span class="line">[Huawei]port-group 1</span><br><span class="line">[Huawei-port-group-1]group-member Ethernet0/0/3 Ethernet0/0/4</span><br><span class="line">[Huawei-port-group-1]port link-type access </span><br><span class="line">[Huawei-port-group-1]port default vlan 2                        </span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/7</span><br><span class="line">[Huawei-Ethernet0/0/7]port default vlan 1   //还原配置</span><br><span class="line"></span><br><span class="line">[Huawei-Ethernet0/0/7]port link-type trunk</span><br><span class="line">[Huawei-Ethernet0/0/1]port trunk allow-pass vlan all</span><br></pre></td></tr></table></figure>
 
-<h2 id="案例4：链路聚合配置"><a href="#案例4：链路聚合配置" class="headerlink" title="案例4：链路聚合配置"></a>案例4：链路聚合配置</h2><p><img src="/2019/06/13/net-huawei/day02_04.png" alt="图-4"></p>
+<h2 id="案例4：链路聚合配置"><a href="#案例4：链路聚合配置" class="headerlink" title="案例4：链路聚合配置"></a>案例4：链路聚合配置</h2><p><img src="/net-huawei/day02_04.png" alt="图-4"></p>
 <p>S1配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface Eth-trunk 1</span><br><span class="line">[Huawei- Eth-trunk1]trunkport ethernet 0/0/1  0/0/2</span><br></pre></td></tr></table></figure>
 
 <p>S2配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface Eth-trunk 1</span><br><span class="line">[Huawei- Eth-trunk1]trunkport ethernet 0/0/1  0/0/2</span><br></pre></td></tr></table></figure>
 
-<h2 id="案例5：配置静态路由"><a href="#案例5：配置静态路由" class="headerlink" title="案例5：配置静态路由"></a>案例5：配置静态路由</h2><p><img src="/2019/06/13/net-huawei/day02_05.png" alt="图-5"></p>
+<h2 id="案例5：配置静态路由"><a href="#案例5：配置静态路由" class="headerlink" title="案例5：配置静态路由"></a>案例5：配置静态路由</h2><p><img src="/net-huawei/day02_05.png" alt="图-5"></p>
 <p>R1配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address 192.168.1.254 24</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]quit</span><br><span class="line"></span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address 192.168.2.1 24</span><br><span class="line"></span><br><span class="line">//ip  route-static  目标网段  子网掩码   下一跳地址</span><br><span class="line">[Huawei]ip route-static 192.168.3.0 24 192.168.2.2</span><br><span class="line">[Huawei]ip route-static 192.168.4.0 24 192.168.2.2</span><br></pre></td></tr></table></figure>
 
 <p>R2配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address 192.168.3.254 24</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]quit</span><br><span class="line"></span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address 192.168.2.2 24</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]quit</span><br><span class="line"></span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/2</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address 192.168.4.254 24</span><br><span class="line"></span><br><span class="line">[Huawei]ip route-static 192.168.1.0 24 192.168.2.1</span><br></pre></td></tr></table></figure>
 
-<h2 id="案例6：三层交换机基本配置"><a href="#案例6：三层交换机基本配置" class="headerlink" title="案例6：三层交换机基本配置"></a>案例6：三层交换机基本配置</h2><p><img src="/2019/06/13/net-huawei/day02_06.png" alt="图-6"></p>
+<h2 id="案例6：三层交换机基本配置"><a href="#案例6：三层交换机基本配置" class="headerlink" title="案例6：三层交换机基本配置"></a>案例6：三层交换机基本配置</h2><p><img src="/net-huawei/day02_06.png" alt="图-6"></p>
 <p>三层交换机配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]vlan batch 2 3    //创建VLAN2、VLAN3</span><br><span class="line"></span><br><span class="line">[Huawei]interface Vlanif 1</span><br><span class="line">[Huawei-Vlanif1]ip address 192.168.1.254 24</span><br><span class="line"></span><br><span class="line">[Huawei]interface Vlanif 2</span><br><span class="line">[Huawei-Vlanif1]ip address 192.168.2.254 24</span><br><span class="line"></span><br><span class="line">[Huawei]interface Vlanif 3</span><br><span class="line">[Huawei-Vlanif1]ip address 192.168.3.254 24</span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/2</span><br><span class="line">[Huawei-Ethernet0/0/7] port link-type access</span><br><span class="line">[Huawei-Ethernet0/0/7] port default vlan 2</span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/3</span><br><span class="line">[Huawei-Ethernet0/0/7] port link-type access</span><br><span class="line">[Huawei-Ethernet0/0/7] port default vlan 3</span><br></pre></td></tr></table></figure>
 
 <h1 id="day03："><a href="#day03：" class="headerlink" title="day03："></a>day03：</h1><h2 id="案例1：动态路由"><a href="#案例1：动态路由" class="headerlink" title="案例1：动态路由"></a>案例1：动态路由</h2><p>通过配置静态路由协议ospf实现全网互通</p>
-<p><img src="/2019/06/13/net-huawei/day03_01.png" alt="图-1"></p>
+<p><img src="/net-huawei/day03_01.png" alt="图-1"></p>
 <p>S3700交换机配置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]vlan batch 2 3     //创建VLAN2、3</span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/2</span><br><span class="line">[Huawei-Ethernet0/0/2]port default vlan 2</span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/3</span><br><span class="line">[Huawei-Ethernet0/0/3]port default vlan 3</span><br><span class="line"></span><br><span class="line">[Huawei]interface Ethernet0/0/22</span><br><span class="line">[Huawei-Ethernet0/0/22]port link-type trunk</span><br><span class="line">[Huawei-Ethernet0/0/22]port trunk allow-pass vlan all</span><br></pre></td></tr></table></figure>
 
@@ -179,23 +179,23 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface GigabitEthernet 0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0] ip address  192.168.4.2 24</span><br><span class="line"></span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/0] ip address  192.168.5.254 24</span><br><span class="line"></span><br><span class="line">[Huawei]ospf 1</span><br><span class="line">[Huawei-ospf-1]area 0</span><br><span class="line">[Huawei-ospf-1-area-0.0.0.0]network 192.168.4.0 0.0.0.255</span><br></pre></td></tr></table></figure>
 
 <h2 id="案例2：基本ACL的配置（1）"><a href="#案例2：基本ACL的配置（1）" class="headerlink" title="案例2：基本ACL的配置（1）"></a>案例2：基本ACL的配置（1）</h2><p>按下图拓扑结构，禁止主机pc2与pc1通信，而允许所有其他流量</p>
-<p><img src="/2019/06/13/net-huawei/day03_02.png" alt="图-2"></p>
+<p><img src="/net-huawei/day03_02.png" alt="图-2"></p>
 <p>1，为路由器g0&#x2F;0&#x2F;0接口配置ip 192.168.1.254，为路由器g0&#x2F;0&#x2F;1接口配置ip 192.168.2.254</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface GigabitEthernet 0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0] ip address  192.168.1.254 24</span><br><span class="line">[Huawei]acl 2000</span><br><span class="line">[Huawei-acl-basic-2000]rule deny source 192.168.2.1 0</span><br><span class="line"></span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip address  192.168.2.254 24</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]traffic-filter inbound acl 2000</span><br></pre></td></tr></table></figure>
 
 <h2 id="案例3：基本ACL的配置（2）"><a href="#案例3：基本ACL的配置（2）" class="headerlink" title="案例3：基本ACL的配置（2）"></a>案例3：基本ACL的配置（2）</h2><p>按下图拓扑结构，允许主机pc2与pc1互通，而禁止其他设备访问pc1</p>
-<p><img src="/2019/06/13/net-huawei/day03_03.png" alt="图-3"></p>
+<p><img src="/net-huawei/day03_03.png" alt="图-3"></p>
 <p>注：此案例需要提前配置好所有设备的ip地址</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]acl 2001</span><br><span class="line">[Huawei-acl-basic-2001]rule permit source 192.168.2.1 0</span><br><span class="line">[Huawei-acl-basic-2001]rule deny source any</span><br><span class="line">[Huawei]interface GigabitEthernet 0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]undo traffic-filter inbound acl 2000</span><br><span class="line">[Huawei-GigabitEthernet0/0/1] traffic-filter inbound acl 2001</span><br></pre></td></tr></table></figure>
 
 <h2 id="案例4：高级ACL"><a href="#案例4：高级ACL" class="headerlink" title="案例4：高级ACL"></a>案例4：高级ACL</h2><p>按下图拓扑结构，禁止pc2访问pc1的ftp服务，禁止pc3访问pc1的www服务，所有主机的其他服务不受限制</p>
-<p><img src="/2019/06/13/net-huawei/day03_04.png" alt="图-4"></p>
+<p><img src="/net-huawei/day03_04.png" alt="图-4"></p>
 <p>注：此案例需要提前配置好所有设备的ip地址</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]acl 3000</span><br><span class="line">[Huawei-acl-adv-3000]rule deny tcp source 192.168.2.1 0 destination 192.168.1.1 </span><br><span class="line">0 destination-port eq 21</span><br><span class="line">[Huawei-acl-adv-3000]rule deny tcp source 192.168.2.2 0 destination 192.168.1.1 </span><br><span class="line">0 destination-port eq 80</span><br><span class="line">[Huawei]interface g0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]traffic-filter inbound acl 3000      //在接口中应用acl</span><br></pre></td></tr></table></figure>
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2019/06/13/net-huawei/" data-id="cl8exhs830020e661bxsjff8u" data-title="华为相关网络技术" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2019/06/13/net-huawei/" data-id="cl8fcn0hp0025dt61cknk7xfq" data-title="华为相关网络技术" class="article-share-link">分享</a>
       
       
       
@@ -245,6 +245,18 @@
           </li>
         
           <li>
+            <a href="/2022/01/09/yiqing/">西安疫情</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/14/chengtizhong/">减肥期间，如何称一个满意的体重</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/12/shenghuo-tips/">生活经验</a>
+          </li>
+        
+          <li>
             <a href="/2019/12/31/2019/">2019年总结</a>
           </li>
         
@@ -262,18 +274,6 @@
         
           <li>
             <a href="/2019/08/08/goodbye-nanjing/">再见南京</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/30/201907/">2019年7月</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/24/clear-order/">数据库自动删除超时订单</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/01/exam6/">web第三阶段月考</a>
           </li>
         
       </ul>
