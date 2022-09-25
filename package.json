@@ -20,6 +20,7 @@
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-sass": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "node-sass": "^7.0.3"
   }
 }

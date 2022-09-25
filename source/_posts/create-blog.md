@@ -39,6 +39,7 @@ date: 2018-04-20 09:30
 - [使用hexo命令发布博文](#a9)
 - [访问 username.github.io](#a10)
 - [配置自己的域名](#a11)
+- [使用cnpm下载exo-renderer-sass](#a12)
 
 
 # 详细流程
@@ -184,3 +185,8 @@ GitHub默认以这个地址为项目首页
 记录值：GitHub的ip地址 192.30.252.153 或 192.30.252.154
 ```
 接着，在hexo的source目录下创建 CNAME 文件，写入 blog.xx.com 即可。
+
+## <span id="a12">12. 使用cnpm下载exo-renderer-sass</span>
+npm install cnpm@7.1.0 -g —registry=https://registry.npm.taobao.org
+npm config set registry https://registry.npm.taobao.org 
+cnpm install hexo-renderer-sass —save 
