@@ -10,10 +10,6 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -106,12 +102,12 @@
 <h2 id="3-关联本地计算机和GitHub账号"><a href="#3-关联本地计算机和GitHub账号" class="headerlink" title="3. 关联本地计算机和GitHub账号"></a>3. <span id="a3">关联本地计算机和GitHub账号</span></h2><p>可参考 &#x3D;》 <a target="_blank" rel="noopener" href="https://github.com/mixinan/mygit">Git基本使用</a></p>
 <h2 id="4-在GitHub创建“username-github-io”仓库"><a href="#4-在GitHub创建“username-github-io”仓库" class="headerlink" title="4. 在GitHub创建“username.github.io”仓库"></a>4. <span id="a4">在GitHub创建“username.github.io”仓库</span></h2><p>需要强调的是，项目的命名格式，必须是 <code>你的用户名.github.io</code></p>
 <h2 id="5-用-npm-安装-hexo"><a href="#5-用-npm-安装-hexo" class="headerlink" title="5. 用 npm 安装 hexo"></a>5. <span id="a5">用 npm 安装 hexo</span></h2><p>运行“cmd”进入命令行窗口，分别执行（需要等待下载）</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-cli -g</span><br><span class="line">npm <span class="keyword">install</span> hexo --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
 
 <p>如果卡住不动，可能是网络原因，Ctrl+c 以后，重新执行命令去下载</p>
 <h2 id="6-在电脑盘里创建blog文件夹，下载hexo组件"><a href="#6-在电脑盘里创建blog文件夹，下载hexo组件" class="headerlink" title="6. 在电脑盘里创建blog文件夹，下载hexo组件"></a>6. <span id="a6">在电脑盘里创建blog文件夹，下载hexo组件</span></h2><p>在你的电脑盘里新建文件夹”blog”(别的名称也行，但别用中文)，进入此文件夹</p>
 <p>右键，选择“Git Bash Here”，开启Git终端，执行：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p>它可以下载hexo博客框架的组件。下载过程需要等待一两分钟。</p>
 <p>同上，如果卡住不动，可能是网络原因，Ctrl+c 以后，重新执行命令去下载</p>
@@ -119,21 +115,21 @@
 <p>“_config.yml”是博客框架的配置文件，可以用编辑工具打开，更改对应参数。 </p>
 <p>其中，#site 部分，为博客信息，可以更改作者、语言、个性签名等。</p>
 <p>翻到文件末尾，deploy 部分需要修改（<strong>注意</strong>：写下方键值对的时候，冒号后面必须加一个空格），使它跟GitHub代码仓库产生关联：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repo:</span> 在GitHub创建的项目地址</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 在GitHub创建的项目地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>修改完毕后，重启终端（cmd 或者 Git Bash 都行），执行：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>它可以下载相关的部署工具</p>
 <h2 id="8-在-source-posts-文件夹下创建-xx-md-文件"><a href="#8-在-source-posts-文件夹下创建-xx-md-文件" class="headerlink" title="8. 在 source&#x2F;_posts 文件夹下创建 xx.md 文件"></a>8. <span id="a8">在 source&#x2F;_posts 文件夹下创建 xx.md 文件</span></h2><p>每个.md 后缀的文件，相当于是一篇博文。也可以直接使用以下命令生成博文:</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> blogName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new blogName</span><br></pre></td></tr></table></figure>
 <p>博文基本结构：</p>
 <p>第一部分叫 <code>front-matter</code>，声明这篇博文的基本信息，比如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">文章的时间</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">文章的标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">文章的归类</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">文章的概要(在主页显示的片段)</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">文章的主体内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">date: 文章的时间</span><br><span class="line">tags: 文章的标签</span><br><span class="line">categories: 文章的归类</span><br><span class="line">description: 文章的概要(在主页显示的片段)</span><br><span class="line">---</span><br><span class="line">文章的主体内容</span><br></pre></td></tr></table></figure>
 
 <p>中间以三个“-”做分隔，下面写文章的正文。</p>
 <p>正文格式，主要是markdown，学习 &#x3D;》 <a href="../markdown">markdown基本语法</a></p>
-<h2 id="9-使用-hexo命令-发布博文"><a href="#9-使用-hexo命令-发布博文" class="headerlink" title="9. 使用 hexo命令 发布博文"></a>9. <span id="a9">使用 hexo命令 发布博文</span></h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">最常用的几条命令</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">更改完配置，重新部署之前，清除之前生成的网页文件，以便重新生成</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">generate</span> （可简写为 hexo g） </span><br><span class="line">用md文件生成网页文件</span><br><span class="line"></span><br><span class="line">hexo deployer （可简写为 hexo d）</span><br><span class="line">把你的更新，发布到GitHub</span><br></pre></td></tr></table></figure>
+<h2 id="9-使用-hexo命令-发布博文"><a href="#9-使用-hexo命令-发布博文" class="headerlink" title="9. 使用 hexo命令 发布博文"></a>9. <span id="a9">使用 hexo命令 发布博文</span></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">最常用的几条命令</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">更改完配置，重新部署之前，清除之前生成的网页文件，以便重新生成</span><br><span class="line"></span><br><span class="line">hexo generate （可简写为 hexo g） </span><br><span class="line">用md文件生成网页文件</span><br><span class="line"></span><br><span class="line">hexo deployer （可简写为 hexo d）</span><br><span class="line">把你的更新，发布到GitHub</span><br></pre></td></tr></table></figure>
 
 <h3 id="在文章中插入图片"><a href="#在文章中插入图片" class="headerlink" title="在文章中插入图片"></a>在文章中插入图片</h3><ul>
 <li>把配置文件 _config.yml 里的 post_asset_folder 选项设为true</li>
@@ -141,19 +137,19 @@
 <li>运行 <code>hexo n &quot;xxxx&quot;</code>生成md博文时，&#x2F;source&#x2F;_posts文件夹内除了xxxx.md文件，还有一个同名文件夹</li>
 <li>把图片复制到xxxx文件夹，然后在xxxx.md中使用markdown格式引入图片，路径为<code>xxxx/图片名.jpg</code></li>
 </ul>
-<h3 id="在hexo环境下创建草稿"><a href="#在hexo环境下创建草稿" class="headerlink" title="在hexo环境下创建草稿"></a>在hexo环境下创建草稿</h3><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新建</span></span><br><span class="line">$ hexo <span class="keyword">new</span> <span class="type">draft</span> <span class="string">&quot;new draft&quot;</span></span><br><span class="line">会在source/_drafts目录下生成一个<span class="keyword">new</span><span class="type"></span>-draft.md文件</span><br><span class="line">但这个文件不在页面上显示，链接也访问不到</span><br><span class="line">如果你想把某篇文章移除，可以把它移动到_drafts目录里</span><br></pre></td></tr></table></figure>
+<h3 id="在hexo环境下创建草稿"><a href="#在hexo环境下创建草稿" class="headerlink" title="在hexo环境下创建草稿"></a>在hexo环境下创建草稿</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//新建</span><br><span class="line">$ hexo new draft &quot;new draft&quot;</span><br><span class="line">会在source/_drafts目录下生成一个new-draft.md文件</span><br><span class="line">但这个文件不在页面上显示，链接也访问不到</span><br><span class="line">如果你想把某篇文章移除，可以把它移动到_drafts目录里</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="10-访问-username-github-io"><a href="#10-访问-username-github-io" class="headerlink" title="10. 访问 username.github.io"></a>10. <span id="a10">访问 username.github.io</span></h2><p>GitHub默认以这个地址为项目首页</p>
 <h2 id="11-配置自己的域名"><a href="#11-配置自己的域名" class="headerlink" title="11. 配置自己的域名"></a><span id="a11">11. 配置自己的域名</span></h2><p>有人可能觉得使用默认的 username.github.io 域名没有逼格。也可以配置自己的域名（类似 blog.xx.com）。以阿里云域名来说，进入域名控制台，添加解析，填写：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">记录类型：<span class="keyword">A</span></span><br><span class="line">主机记录：blog</span><br><span class="line">解析线路：默认</span><br><span class="line">记录值：GitHub的ip地址 <span class="number">192.30.252.153</span> 或 <span class="number">192.30.252.154</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">记录类型：A</span><br><span class="line">主机记录：blog</span><br><span class="line">解析线路：默认</span><br><span class="line">记录值：GitHub的ip地址 192.30.252.153 或 192.30.252.154</span><br></pre></td></tr></table></figure>
 <p>接着，在hexo的source目录下创建 CNAME 文件，写入 blog.xx.com 即可。</p>
-<h2 id="12-使用cnpm下载exo-renderer-sass"><a href="#12-使用cnpm下载exo-renderer-sass" class="headerlink" title="12. 使用cnpm下载exo-renderer-sass"></a><span id="a12">12. 使用cnpm下载exo-renderer-sass</span></h2><p>npm install <a href="mailto:&#99;&#110;&#112;&#109;&#64;&#x37;&#x2e;&#x31;&#x2e;&#48;">cnpm@7.1.0</a> -g —registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>cnpm install hexo-renderer-sass —save </p>
+<h2 id="12-使用cnpm下载exo-renderer-sass"><a href="#12-使用cnpm下载exo-renderer-sass" class="headerlink" title="12. 使用cnpm下载exo-renderer-sass"></a><span id="a12">12. 使用cnpm下载exo-renderer-sass</span></h2><p>npm install <a href="mailto:&#x63;&#x6e;&#112;&#x6d;&#x40;&#55;&#46;&#49;&#x2e;&#x30;">cnpm@7.1.0</a> -g —registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>cnpm install hexo-renderer-sass —save </p>
 
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2018/04/20/create-blog/" data-id="cmfj8ugqt001trc7wbblag7wf" data-title="本博客的创建流程" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2018/04/20/create-blog/" data-id="cmfj9fgdr001ua87w81q5bthr" data-title="本博客的创建流程" class="article-share-link">分享</a>
       
       
       
@@ -314,10 +310,6 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 

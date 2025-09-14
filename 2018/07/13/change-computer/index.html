@@ -10,10 +10,6 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -58,37 +54,37 @@
 <hr>
 <h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><p>安装 Node.js 、Git</p>
 <p>安装 hexo，执行命令：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 
 <p>模块安装，执行命令：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-git --save</span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-feed --save</span><br><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
 
 <p>克隆 gitHub 项目到本地：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@github.com:mixinan/mixinan.github.io.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:mixinan/mixinan.github.io.git</span><br></pre></td></tr></table></figure>
 
 <p>在克隆到本地的文件夹里，除了.git 文件夹以外，其它的都删掉。不需要再做 hexo init初始化</p>
 <p>将原来电脑上使用hexo写博客的整个目录（所有文件）搬过来</p>
 <p>里面应该有一个叫.gitignore的文件，如果没有就输入 touch .gitignore，创建一个</p>
 <p>.gitignore文件里应该是这些内容 </p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">.DS_Store</span> </span><br><span class="line">Thumbs<span class="number">.</span><span class="built_in">db</span> </span><br><span class="line"><span class="built_in">db</span><span class="number">.</span>json </span><br><span class="line">*.log </span><br><span class="line">node_modules/ </span><br><span class="line"><span class="meta">public</span>/ </span><br><span class="line"><span class="meta">.deploy</span>*/ </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.DS_Store </span><br><span class="line">Thumbs.db </span><br><span class="line">db.json </span><br><span class="line">*.log </span><br><span class="line">node_modules/ </span><br><span class="line">public/ </span><br><span class="line">.deploy*/ </span><br></pre></td></tr></table></figure>
 
 
 <p>创建并切换到hexo分支 </p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
 
 <p>提交复制过来的文件到暂存区</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> .</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
 <p>提交</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;new branch hexo&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;new branch hexo&quot;</span><br></pre></td></tr></table></figure>
 
 <p>推送分支到github</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span> --<span class="keyword">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push --set-upstream origin hexo</span><br></pre></td></tr></table></figure>
 
 <p>到这里基本上就搞定了，以后再推就可以直接git push了，hexo的操作跟以前一样。</p>
 <p>今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。</p>
 <p>克隆分支的操作</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -<span class="selector-tag">b</span> hexo git@github<span class="selector-class">.com</span>:mixinan/mixinan<span class="selector-class">.github</span><span class="selector-class">.io</span>.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone -b hexo git@github.com:mixinan/mixinan.github.io.git</span><br></pre></td></tr></table></figure>
 
 <p>因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo</p>
 <p>这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上</p>
@@ -107,14 +103,14 @@
 <p>将core.autocrlf设为 false 即可解决这个问题。注意：如果你和你的伙伴只工作于Windows平台或者Linux平台，没问题；不过如果存在跨平台的话，还是需要考虑一下。</p>
 <p>但当 core autocrlf为true时，还有一个需要慎重的地方，当你上传一个二进制文件，Git可能会将二进制文件误以为是文本文件，从而也会修改你的二进制文件，从而产生隐患。</p>
 <p>附上修改autocrlf的命令，以改为true为例：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.<span class="built_in">auto</span>crlf <span class="literal">true</span>   </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf true   </span><br></pre></td></tr></table></figure>
 
 <p>可以把上面的参数true，换成false或input</p>
 
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2018/07/13/change-computer/" data-id="cmfj8ugqr001hrc7wfwx71dm5" data-title="换个电脑写博客" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2018/07/13/change-computer/" data-id="cmfj9fgdp001ja87w2q4s4omf" data-title="换个电脑写博客" class="article-share-link">分享</a>
       
       
       
@@ -275,10 +271,6 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 

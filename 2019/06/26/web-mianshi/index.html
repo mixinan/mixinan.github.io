@@ -10,10 +10,6 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -141,7 +137,7 @@
 </ul>
 <h2 id="浏览器相关-1"><a href="#浏览器相关-1" class="headerlink" title="浏览器相关"></a>浏览器相关</h2><h5 id="b1">1. 浏览器是由什么组成的</h5>
 
-<p>从原理构成上分为七个模块<br> <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">User</span> <span class="title">Interface</span>（用户界面）</span><br><span class="line">Browser engine（浏览器引擎）</span><br><span class="line">Rendering engine（渲染引擎）</span><br><span class="line">Networking（网络）</span><br><span class="line">JavaScript Interpreter（js解释器）</span><br><span class="line">UI Backend（UI后端）</span><br><span class="line"><span class="keyword">Date</span> Persistence（数据持久化存储）</span><br></pre></td></tr></table></figure></p>
+<p>从原理构成上分为七个模块<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">User Interface（用户界面）</span><br><span class="line">Browser engine（浏览器引擎）</span><br><span class="line">Rendering engine（渲染引擎）</span><br><span class="line">Networking（网络）</span><br><span class="line">JavaScript Interpreter（js解释器）</span><br><span class="line">UI Backend（UI后端）</span><br><span class="line">Date Persistence（数据持久化存储）</span><br></pre></td></tr></table></figure></p>
 <p>其中，最重要的是:</p>
 <ul>
 <li><p><code>渲染引擎（内核）</code><br>  负责 <code>HTML</code> 、<code>CSS</code> 的解析，页面布局、渲染与复合层合成  </p>
@@ -160,7 +156,7 @@
 
 <h5 id="b4">4. 几个很实用的BOM属性对象方法</h5>
 
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">location 对象：主要存储 url 相关信息</span><br><span class="line"></span><br><span class="line">history 对象：浏览历史信息相关</span><br><span class="line"></span><br><span class="line">history.go()       <span class="regexp">//</span> 前进或后退指定的页面数 history.go(num);</span><br><span class="line">history.back()     <span class="regexp">//</span> 后退一页</span><br><span class="line">history.forward()  <span class="regexp">//</span> 前进一页</span><br><span class="line"></span><br><span class="line">navigator 对象：浏览器信息相关</span><br><span class="line"></span><br><span class="line">navigator.userAgent      <span class="regexp">//</span>返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</span><br><span class="line">navigator.cookieEnabled  <span class="regexp">//</span> 返回浏览器是否支持(启用)cookie</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location 对象：主要存储 url 相关信息</span><br><span class="line"></span><br><span class="line">history 对象：浏览历史信息相关</span><br><span class="line"></span><br><span class="line">history.go()       // 前进或后退指定的页面数 history.go(num);</span><br><span class="line">history.back()     // 后退一页</span><br><span class="line">history.forward()  // 前进一页</span><br><span class="line"></span><br><span class="line">navigator 对象：浏览器信息相关</span><br><span class="line"></span><br><span class="line">navigator.userAgent      //返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</span><br><span class="line">navigator.cookieEnabled  // 返回浏览器是否支持(启用)cookie</span><br></pre></td></tr></table></figure>
 
 <h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h2><h5 id="c1">1. 谈谈你对SEO的理解</h5>
 
@@ -187,7 +183,7 @@
 <li>我们可以通过 <code>hashchange</code> 事件，监听到 <code>hash</code> 值的变化，从而响应不同路径的逻辑处理</li>
 </ul>
 <p>基于 <code>history</code> 新 <code>API</code>（ <code>history.pushState()+popState</code> 事件）</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.history.pushState(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="string">&quot;http://www.google.com&quot;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.history.pushState(null, null, &quot;http://www.google.com&quot;);</span><br></pre></td></tr></table></figure>
 
 <p>这两个 <code>API</code> 的相同之处是都会操作浏览器的历史记录，而不会引起页面的刷新。不同之处在于，<code>pushState</code> 会增加一条新的历史记录，而 <code>replaceState</code> 则会替换当前的历史记录</p>
 <p>详见<a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/API/History_API" rel="nofollow noopener">History API -MDN</a></p>
@@ -211,7 +207,7 @@
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2019/06/26/web-mianshi/" data-id="cmfj8ugr40049rc7wbbdefqnw" data-title="前端面试题" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2019/06/26/web-mianshi/" data-id="cmfj9fge20048a87w8jpkgvyn" data-title="前端面试题" class="article-share-link">分享</a>
       
       
       
@@ -372,10 +368,6 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
