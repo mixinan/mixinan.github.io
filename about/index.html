@@ -118,7 +118,7 @@
 </tbody></table>
 <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
 <li><strong>微博</strong>：<a target="_blank" rel="noopener" href="https://weibo.com/hejinfriend">@先上一盘凉菜</a> </li>
-<li><strong>邮箱</strong>：<a href="mailto:&#103;&#117;&#111;&#x78;&#x6e;&#x32;&#48;&#x32;&#x33;&#x40;&#105;&#x63;&#x6c;&#111;&#117;&#x64;&#46;&#99;&#111;&#x6d;">guoxn2023@icloud.com</a></li>
+<li><strong>邮箱</strong>：<a href="mailto:&#x67;&#117;&#x6f;&#x78;&#x6e;&#x32;&#x30;&#x32;&#x33;&#64;&#x69;&#99;&#x6c;&#111;&#x75;&#x64;&#x2e;&#x63;&#111;&#x6d;">guoxn2023@icloud.com</a></li>
 <li><strong>GitHub</strong>：<a target="_blank" rel="noopener" href="https://github.com/mixinan">https://github.com/mixinan</a></li>
 </ul>
 <hr>
@@ -126,7 +126,7 @@
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/about/index.html" data-id="cmfj6ctm00002ey7w0jeh0hsn" data-title="关于我" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/about/index.html" data-id="cmfj7jsrf0002ud7w50xqa02i" data-title="关于我" class="article-share-link">分享</a>
       
       
       
@@ -143,25 +143,39 @@
   <section id="comments">
     
 <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-  const gitalk = new Gitalk({
-    clientID: 'd34565d0ec049d74c68b',
-    clientSecret: '720345ce4451787077fe351032dd3a33e9834ec4',
-    repo: 'mixinan.github.io',
-    owner: 'mixinan',
-    admin: ["mixinan"],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
+  // 异步加载Gitalk评论系统以提高页面加载速度
+  document.addEventListener('DOMContentLoaded', function() {
+    // 创建link元素引入Gitalk CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css';
+    document.head.appendChild(link);
+    
+    // 创建script元素引入Gitalk JS
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js';
+    script.onload = function() {
+      const gitalk = new Gitalk({
+        clientID: 'd34565d0ec049d74c68b',
+        clientSecret: '720345ce4451787077fe351032dd3a33e9834ec4',
+        repo: 'mixinan.github.io',
+        owner: 'mixinan',
+        admin: ["mixinan"],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      });
+      
+      // 检查是否为本地开发环境
+      if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+        document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available on local development.';
+        return;
+      }
+      
+      gitalk.render('gitalk-container');
+    };
+    document.body.appendChild(script);
   });
-  (function() {
-    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available on local development.';
-      return;
-    }
-    gitalk.render('gitalk-container');
-  })();
 </script>
 
   </section>
