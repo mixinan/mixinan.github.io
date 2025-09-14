@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -62,17 +66,17 @@
 <h2 id="在当前行下方插入一行"><a href="#在当前行下方插入一行" class="headerlink" title="在当前行下方插入一行"></a>在当前行下方插入一行</h2><p>ctrl + 回车 </p>
 <h1 id="编写C语言程序"><a href="#编写C语言程序" class="headerlink" title="编写C语言程序"></a>编写C语言程序</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>先下载 VSCode、MinGW 等软件。<br>VSCode 不是IDE（集成开发环境）。它只是一个编辑器，所以编译器要自己安装。<br>MinGW 的默认安装目录是 C:\MinGW，安装完要配置环境变量：把 bin 目录放入 PATH 中。然后在 cmd 窗口执行 gcc  -v 测试。</p>
 <h2 id="运行环境搭建"><a href="#运行环境搭建" class="headerlink" title="运行环境搭建"></a>运行环境搭建</h2><p>先新建一个用于放置 C语言 源文件的目录，比如 D:&#x2F;&#x2F;workspace<br>用 VSCode 打开该目录，新建 test.c 文件，编写代码。<br>按F5，提示选择环境，选C++gdb，会自动生成”.vscode”文件夹，并弹出 launch.json 文件，用以下内容代替：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;(gdb) Launch&quot;, </span><br><span class="line">            &quot;type&quot;: &quot;cppdbg&quot;, </span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">            &quot;targetArchitecture&quot;: &quot;x86&quot;,</span><br><span class="line">            &quot;program&quot;: &quot;$&#123;file&#125;.exe&quot;, </span><br><span class="line">            &quot;miDebuggerPath&quot;: &quot;c:\\MinGW\\bin\\gdb.exe&quot;, // 与本机MinGw的路径对应</span><br><span class="line">            &quot;args&quot;: [], </span><br><span class="line">            &quot;stopAtEntry&quot;: false, </span><br><span class="line">            &quot;cwd&quot;: &quot;$&#123;workspaceRoot&#125;&quot;,</span><br><span class="line">            &quot;externalConsole&quot;: true, </span><br><span class="line">            &quot;preLaunchTask&quot;: &quot;g++&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;configurations&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;(gdb) Launch&quot;</span>, </span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;cppdbg&quot;</span>, </span><br><span class="line">            <span class="string">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">            <span class="string">&quot;targetArchitecture&quot;</span>: <span class="string">&quot;x86&quot;</span>,</span><br><span class="line">            <span class="string">&quot;program&quot;</span>: <span class="string">&quot;$&#123;file&#125;.exe&quot;</span>, </span><br><span class="line">            <span class="string">&quot;miDebuggerPath&quot;</span>: <span class="string">&quot;c:<span class="subst">\\</span>MinGW<span class="subst">\\</span>bin<span class="subst">\\</span>gdb.exe&quot;</span>, <span class="comment">// 与本机MinGw的路径对应</span></span><br><span class="line">            <span class="string">&quot;args&quot;</span>: [], </span><br><span class="line">            <span class="string">&quot;stopAtEntry&quot;</span>: <span class="literal">false</span>, </span><br><span class="line">            <span class="string">&quot;cwd&quot;</span>: <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;externalConsole&quot;</span>: <span class="literal">true</span>, </span><br><span class="line">            <span class="string">&quot;preLaunchTask&quot;</span>: <span class="string">&quot;g++&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>回到 C 语言程序界面，按F5，报错提示，选择“配置任务”，选择第一项，会在”.vscode”文件夹自动生成tasks.json文件，用以下内容代替原有内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line">    &quot;command&quot;: &quot;g++&quot;,</span><br><span class="line">    &quot;isShellCommand&quot;: true,</span><br><span class="line">    &quot;showOutput&quot;: &quot;always&quot;,</span><br><span class="line">    &quot;args&quot;: [&quot;-g&quot;,&quot;$&#123;file&#125;&quot;,&quot;-o&quot;,&quot;$&#123;file&#125;.exe&quot;],</span><br><span class="line">    &quot;problemMatcher&quot;: &#123;</span><br><span class="line">        &quot;owner&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;fileLocation&quot;: [&quot;relative&quot;, &quot;$&#123;workspaceRoot&#125;&quot;],</span><br><span class="line">        &quot;pattern&quot;: &#123;</span><br><span class="line">            &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,</span><br><span class="line">            &quot;file&quot;: 1,</span><br><span class="line">            &quot;line&quot;: 2,</span><br><span class="line">            &quot;column&quot;: 3,</span><br><span class="line">            &quot;severity&quot;: 4,</span><br><span class="line">            &quot;message&quot;: 5</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;command&quot;</span>: <span class="string">&quot;g++&quot;</span>,</span><br><span class="line">    <span class="string">&quot;isShellCommand&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;showOutput&quot;</span>: <span class="string">&quot;always&quot;</span>,</span><br><span class="line">    <span class="string">&quot;args&quot;</span>: [<span class="string">&quot;-g&quot;</span>,<span class="string">&quot;$&#123;file&#125;&quot;</span>,<span class="string">&quot;-o&quot;</span>,<span class="string">&quot;$&#123;file&#125;.exe&quot;</span>],</span><br><span class="line">    <span class="string">&quot;problemMatcher&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;owner&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="string">&quot;fileLocation&quot;</span>: [<span class="string">&quot;relative&quot;</span>, <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span>],</span><br><span class="line">        <span class="string">&quot;pattern&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;regexp&quot;</span>: <span class="string">&quot;^(.*):(<span class="subst">\\</span>d+):(<span class="subst">\\</span>d+):<span class="subst">\\</span>s+(warning|error):<span class="subst">\\</span>s+(.*)$&quot;</span>,</span><br><span class="line">            <span class="string">&quot;file&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">&quot;line&quot;</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">&quot;column&quot;</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">&quot;severity&quot;</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">&quot;message&quot;</span>: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p> C 语言程序界面，按 F5，就可以运行了。</p>
 <h2 id="乱码问题"><a href="#乱码问题" class="headerlink" title="乱码问题"></a>乱码问题</h2><p>在”.vscode”文件夹下新建head.h头文件，并填入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">static void before(void) __attribute__((constructor));</span><br><span class="line">static void after(void) __attribute__((destructor));</span><br><span class="line">static void middle(void);</span><br><span class="line">static void before()&#123;</span><br><span class="line">    system(&quot;chcp 65001&quot;); //切换字符集</span><br><span class="line">    system(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line">static void after()&#123;</span><br><span class="line">    system(&quot;echo.&quot;);</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#include</span> &lt;stdlib<span class="selector-class">.h</span>&gt;</span><br><span class="line">static void <span class="built_in">before</span>(void) <span class="built_in">__attribute__</span>((constructor));</span><br><span class="line">static void <span class="built_in">after</span>(void) <span class="built_in">__attribute__</span>((destructor));</span><br><span class="line">static void middle(void);</span><br><span class="line">static void <span class="built_in">before</span>()&#123;</span><br><span class="line">    <span class="built_in">system</span>(&quot;chcp <span class="number">65001</span>&quot;); <span class="comment">//切换字符集</span></span><br><span class="line">    <span class="built_in">system</span>(&quot;cls&quot;);</span><br><span class="line">&#125;</span><br><span class="line">static void <span class="built_in">after</span>()&#123;</span><br><span class="line">    <span class="built_in">system</span>(&quot;echo.&quot;);</span><br><span class="line">    <span class="built_in">system</span>(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>修改tasks.json，用以下内容替换:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line">    &quot;command&quot;: &quot;g++&quot;,</span><br><span class="line">    &quot;isShellCommand&quot;: true,</span><br><span class="line">    &quot;showOutput&quot;: &quot;always&quot;,</span><br><span class="line">    &quot;args&quot;: [&quot;-g&quot;,&quot;$&#123;file&#125;&quot;,&quot;-include&quot;,&quot;$&#123;workspaceRoot&#125;\\.vscode\\head.h&quot;,&quot;-o&quot;,&quot;$&#123;file&#125;.exe&quot;], //修改的是这一行，添加了-include命令，预编译头文件</span><br><span class="line">    &quot;problemMatcher&quot;: &#123;</span><br><span class="line">        &quot;owner&quot;: &quot;cpp&quot;,</span><br><span class="line">        &quot;fileLocation&quot;: [&quot;relative&quot;, &quot;$&#123;workspaceRoot&#125;&quot;],</span><br><span class="line">        &quot;pattern&quot;: &#123;</span><br><span class="line">            &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,</span><br><span class="line">            &quot;file&quot;: 1,</span><br><span class="line">            &quot;line&quot;: 2,</span><br><span class="line">            &quot;column&quot;: 3,</span><br><span class="line">            &quot;severity&quot;: 4,</span><br><span class="line">            &quot;message&quot;: 5</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;command&quot;</span>: <span class="string">&quot;g++&quot;</span>,</span><br><span class="line">    <span class="string">&quot;isShellCommand&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;showOutput&quot;</span>: <span class="string">&quot;always&quot;</span>,</span><br><span class="line">    <span class="string">&quot;args&quot;</span>: [<span class="string">&quot;-g&quot;</span>,<span class="string">&quot;$&#123;file&#125;&quot;</span>,<span class="string">&quot;-include&quot;</span>,<span class="string">&quot;$&#123;workspaceRoot&#125;<span class="subst">\\</span>.vscode<span class="subst">\\</span>head.h&quot;</span>,<span class="string">&quot;-o&quot;</span>,<span class="string">&quot;$&#123;file&#125;.exe&quot;</span>], <span class="comment">//修改的是这一行，添加了-include命令，预编译头文件</span></span><br><span class="line">    <span class="string">&quot;problemMatcher&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;owner&quot;</span>: <span class="string">&quot;cpp&quot;</span>,</span><br><span class="line">        <span class="string">&quot;fileLocation&quot;</span>: [<span class="string">&quot;relative&quot;</span>, <span class="string">&quot;$&#123;workspaceRoot&#125;&quot;</span>],</span><br><span class="line">        <span class="string">&quot;pattern&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;regexp&quot;</span>: <span class="string">&quot;^(.*):(<span class="subst">\\</span>d+):(<span class="subst">\\</span>d+):<span class="subst">\\</span>s+(warning|error):<span class="subst">\\</span>s+(.*)$&quot;</span>,</span><br><span class="line">            <span class="string">&quot;file&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">&quot;line&quot;</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">&quot;column&quot;</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">&quot;severity&quot;</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">&quot;message&quot;</span>: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -83,7 +87,7 @@
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2018/06/07/vscode/" data-id="cmfj54q0z003z567w8iol1czc" data-title="VSCode相关" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2018/06/07/vscode/" data-id="cmfj6ctml0045ey7w089d6him" data-title="VSCode相关" class="article-share-link">分享</a>
       
       
       
@@ -114,7 +118,121 @@
 </article>
 
 
+
+
+  <section id="comments">
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: 'd34565d0ec049d74c68b',
+    clientSecret: '720345ce4451787077fe351032dd3a33e9834ec4',
+    repo: 'mixinan.github.io',
+    owner: 'mixinan',
+    admin: ["mixinan"],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available on local development.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+  </section>
 </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近发布</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/25/2024zongjie/">2024年总结</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/19/jianfei-1/">减肥12斤</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/31/2022/">2022年个人总结</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/29/covid19/">核酸阳性的经历</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/07/1207/">后疫情时代</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/21/weibo2022/">2022微博收录</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/05/2022running/">21K 跑团</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/yiqing/">西安疫情</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/14/chengtizhong/">减肥期间，如何称一个满意的体重</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/12/shenghuo-tips/">生活经验</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bendi/" rel="tag">bendi</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/bendi/" style="font-size: 10px;">bendi</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
         
       </div>
     </div>
@@ -130,6 +248,10 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 

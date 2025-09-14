@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -53,19 +57,19 @@
 <hr>
 <hr>
 <p>报错如下，并且在 cmd 窗口 ping github.com 显示“请求超时”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Connection reset by 13.250.177.223 port 22</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Connection reset by 13.250.177.223 port 22</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (F:\blog\node_modules\hexo-util\lib\spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:126:13)</span><br><span class="line">    at ChildProcess.emit (events.js:214:7)</span><br><span class="line">    at ChildProcess.cp.emit (F:\blog\node_modules\cross-spawn\lib\enoent.js:40:29)</span><br><span class="line">    at maybeClose (internal/child_process.js:925:16)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attribute">Connection</span> reset by <span class="number">13.250.177.223</span> port <span class="number">22</span></span><br><span class="line"><span class="attribute">fatal</span>: The remote end hung up unexpectedly</span><br><span class="line"><span class="attribute">fatal</span>: The remote end hung up unexpectedly</span><br><span class="line"><span class="attribute">FATAL</span> Something&#x27;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line"><span class="attribute">Error</span>: Connection reset by <span class="number">13.250.177.223</span> port <span class="number">22</span></span><br><span class="line"><span class="attribute">fatal</span>: The remote end hung up unexpectedly</span><br><span class="line"><span class="attribute">fatal</span>: The remote end hung up unexpectedly</span><br><span class="line"></span><br><span class="line">    <span class="attribute">at</span> ChildProcess.&lt;anonymous&gt; (F:\blog\node_modules\hexo-util\lib\spawn.js:<span class="number">37</span>:<span class="number">17</span>)</span><br><span class="line">    <span class="attribute">at</span> emitTwo (events.js:<span class="number">126</span>:<span class="number">13</span>)</span><br><span class="line">    <span class="attribute">at</span> ChildProcess.emit (events.js:<span class="number">214</span>:<span class="number">7</span>)</span><br><span class="line">    <span class="attribute">at</span> ChildProcess.cp.emit (F:\blog\node_modules\cross-spawn\lib\enoent.js:<span class="number">40</span>:<span class="number">29</span>)</span><br><span class="line">    <span class="attribute">at</span> maybeClose (internal/child_process.js:<span class="number">925</span>:<span class="number">16</span>)</span><br><span class="line">    <span class="attribute">at</span> Process.ChildProcess._handle.onexit (internal/child_process.js:<span class="number">209</span>:<span class="number">5</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h4 id="一、类似以下这种错误"><a href="#一、类似以下这种错误" class="headerlink" title="一、类似以下这种错误"></a>一、类似以下这种错误</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: fatal: Not a git repository (or any of the parent directories): .git</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (F:\blog\node_modules\hexo-util\lib\spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    ……</span><br><span class="line">    (F:\blog\node_modules\hexo-util\lib\enoent.js:40:29)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:477:12)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h4 id="一、类似以下这种错误"><a href="#一、类似以下这种错误" class="headerlink" title="一、类似以下这种错误"></a>一、类似以下这种错误</h4><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line"><span class="keyword">Error: </span>fatal: Not a git repository (or any of the parent directories): .git</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (F:\blog\node_modules\hexo-util\lib\spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    ……</span><br><span class="line">    (F:\blog\node_modules\hexo-util\lib\enoent.js:40:29)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:477:12)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>在网上看到的解决办法（我是照做了，最终解决问题时不知道有没有这一步的作用）：</p>
 <p>把 .deploy_git 文件夹手动删除，重新 hexo deploy 一次，让它再自动生成。</p>
 <h4 id="二、修改-hosts-文件"><a href="#二、修改-hosts-文件" class="headerlink" title="二、修改 hosts 文件"></a>二、修改 hosts 文件</h4><p>路径 C:\Windows\System32\drivers\etc\hosts</p>
 <p>用记事本打开，在末尾添加内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">192.30.253.113    github.com</span><br><span class="line">192.30.252.131 github.com</span><br><span class="line">185.31.16.185 github.global.ssl.fastly.net</span><br><span class="line">74.125.237.1 dl-ssl.google.com</span><br><span class="line">173.194.127.200 groups.google.com</span><br><span class="line">192.30.252.131 github.com</span><br><span class="line">185.31.16.185 github.global.ssl.fastly.net</span><br><span class="line">74.125.128.95 ajax.googleapis.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">192.30.253.113</span>    github.com</span><br><span class="line"><span class="number">192.30.252.131</span> github.com</span><br><span class="line"><span class="number">185.31.16.185</span> github.global.ssl.fastly.net</span><br><span class="line"><span class="number">74.125.237.1</span> dl-ssl.google.com</span><br><span class="line"><span class="number">173.194.127.200</span> groups.google.com</span><br><span class="line"><span class="number">192.30.252.131</span> github.com</span><br><span class="line"><span class="number">185.31.16.185</span> github.global.ssl.fastly.net</span><br><span class="line"><span class="number">74.125.128.95</span> ajax.googleapis.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>保存（以管理员身份），重新运行 cmd 再ping，可以通。</p>
 <h4 id="三、推送时出现-“fatal-The-remote-end-hung-up-unexpectedly-“-错误"><a href="#三、推送时出现-“fatal-The-remote-end-hung-up-unexpectedly-“-错误" class="headerlink" title="三、推送时出现 “fatal: The remote end hung up unexpectedly “ 错误"></a>三、推送时出现 “fatal: The remote end hung up unexpectedly “ 错误</h4><p>原因是推送的文件太大。</p>
 <p>解决方案：修改 .git 目录下的 config 文件，在末尾增加如下内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[http]</span><br><span class="line">postBuffer = 524288000</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="section">[http]</span></span><br><span class="line"><span class="attr">postBuffer</span> = <span class="number">524288000</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>即修改提交缓存大小为500M</p>
 <hr>
@@ -74,7 +78,7 @@
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2018/07/29/question/" data-id="cmfj54q0v002x567wdkeu5t8k" data-title="博客问题" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2018/07/29/question/" data-id="cmfj6ctmh0034ey7wbewg5q9x" data-title="博客问题" class="article-share-link">分享</a>
       
       
       
@@ -105,7 +109,121 @@
 </article>
 
 
+
+
+  <section id="comments">
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: 'd34565d0ec049d74c68b',
+    clientSecret: '720345ce4451787077fe351032dd3a33e9834ec4',
+    repo: 'mixinan.github.io',
+    owner: 'mixinan',
+    admin: ["mixinan"],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available on local development.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+  </section>
 </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近发布</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/25/2024zongjie/">2024年总结</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/19/jianfei-1/">减肥12斤</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/31/2022/">2022年个人总结</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/29/covid19/">核酸阳性的经历</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/07/1207/">后疫情时代</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/21/weibo2022/">2022微博收录</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/05/2022running/">21K 跑团</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/yiqing/">西安疫情</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/14/chengtizhong/">减肥期间，如何称一个满意的体重</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/12/shenghuo-tips/">生活经验</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bendi/" rel="tag">bendi</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/bendi/" style="font-size: 10px;">bendi</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
         
       </div>
     </div>
@@ -121,6 +239,10 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 

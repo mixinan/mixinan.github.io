@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -137,7 +141,7 @@
 </ul>
 <h2 id="浏览器相关-1"><a href="#浏览器相关-1" class="headerlink" title="浏览器相关"></a>浏览器相关</h2><h5 id="b1">1. 浏览器是由什么组成的</h5>
 
-<p>从原理构成上分为七个模块<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">User Interface（用户界面）</span><br><span class="line">Browser engine（浏览器引擎）</span><br><span class="line">Rendering engine（渲染引擎）</span><br><span class="line">Networking（网络）</span><br><span class="line">JavaScript Interpreter（js解释器）</span><br><span class="line">UI Backend（UI后端）</span><br><span class="line">Date Persistence（数据持久化存储）</span><br></pre></td></tr></table></figure></p>
+<p>从原理构成上分为七个模块<br> <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">User</span> <span class="title">Interface</span>（用户界面）</span><br><span class="line">Browser engine（浏览器引擎）</span><br><span class="line">Rendering engine（渲染引擎）</span><br><span class="line">Networking（网络）</span><br><span class="line">JavaScript Interpreter（js解释器）</span><br><span class="line">UI Backend（UI后端）</span><br><span class="line"><span class="keyword">Date</span> Persistence（数据持久化存储）</span><br></pre></td></tr></table></figure></p>
 <p>其中，最重要的是:</p>
 <ul>
 <li><p><code>渲染引擎（内核）</code><br>  负责 <code>HTML</code> 、<code>CSS</code> 的解析，页面布局、渲染与复合层合成  </p>
@@ -156,7 +160,7 @@
 
 <h5 id="b4">4. 几个很实用的BOM属性对象方法</h5>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">location 对象：主要存储 url 相关信息</span><br><span class="line"></span><br><span class="line">history 对象：浏览历史信息相关</span><br><span class="line"></span><br><span class="line">history.go()       // 前进或后退指定的页面数 history.go(num);</span><br><span class="line">history.back()     // 后退一页</span><br><span class="line">history.forward()  // 前进一页</span><br><span class="line"></span><br><span class="line">navigator 对象：浏览器信息相关</span><br><span class="line"></span><br><span class="line">navigator.userAgent      //返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</span><br><span class="line">navigator.cookieEnabled  // 返回浏览器是否支持(启用)cookie</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">location 对象：主要存储 url 相关信息</span><br><span class="line"></span><br><span class="line">history 对象：浏览历史信息相关</span><br><span class="line"></span><br><span class="line">history.go()       <span class="regexp">//</span> 前进或后退指定的页面数 history.go(num);</span><br><span class="line">history.back()     <span class="regexp">//</span> 后退一页</span><br><span class="line">history.forward()  <span class="regexp">//</span> 前进一页</span><br><span class="line"></span><br><span class="line">navigator 对象：浏览器信息相关</span><br><span class="line"></span><br><span class="line">navigator.userAgent      <span class="regexp">//</span>返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</span><br><span class="line">navigator.cookieEnabled  <span class="regexp">//</span> 返回浏览器是否支持(启用)cookie</span><br></pre></td></tr></table></figure>
 
 <h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h2><h5 id="c1">1. 谈谈你对SEO的理解</h5>
 
@@ -183,7 +187,7 @@
 <li>我们可以通过 <code>hashchange</code> 事件，监听到 <code>hash</code> 值的变化，从而响应不同路径的逻辑处理</li>
 </ul>
 <p>基于 <code>history</code> 新 <code>API</code>（ <code>history.pushState()+popState</code> 事件）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.history.pushState(null, null, &quot;http://www.google.com&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.history.pushState(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="string">&quot;http://www.google.com&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>这两个 <code>API</code> 的相同之处是都会操作浏览器的历史记录，而不会引起页面的刷新。不同之处在于，<code>pushState</code> 会增加一条新的历史记录，而 <code>replaceState</code> 则会替换当前的历史记录</p>
 <p>详见<a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/API/History_API" rel="nofollow noopener">History API -MDN</a></p>
@@ -207,7 +211,7 @@
       
     </div>
     <!--footer class="article-footer">
-      <a data-url="http://blog.2hao.cc/2019/06/26/web-mianshi/" data-id="cmfj54q100042567w8zbhbzw7" data-title="前端面试题" class="article-share-link">分享</a>
+      <a data-url="http://blog.2hao.cc/2019/06/26/web-mianshi/" data-id="cmfj6ctmm0048ey7wcx2s7g7z" data-title="前端面试题" class="article-share-link">分享</a>
       
       
       
@@ -238,7 +242,121 @@
 </article>
 
 
+
+
+  <section id="comments">
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: 'd34565d0ec049d74c68b',
+    clientSecret: '720345ce4451787077fe351032dd3a33e9834ec4',
+    repo: 'mixinan.github.io',
+    owner: 'mixinan',
+    admin: ["mixinan"],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available on local development.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+  </section>
 </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近发布</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/25/2024zongjie/">2024年总结</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/19/jianfei-1/">减肥12斤</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/31/2022/">2022年个人总结</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/29/covid19/">核酸阳性的经历</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/07/1207/">后疫情时代</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/21/weibo2022/">2022微博收录</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/05/2022running/">21K 跑团</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/yiqing/">西安疫情</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/14/chengtizhong/">减肥期间，如何称一个满意的体重</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/12/shenghuo-tips/">生活经验</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bendi/" rel="tag">bendi</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/bendi/" style="font-size: 10px;">bendi</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
         
       </div>
     </div>
@@ -254,6 +372,10 @@
 
 <script src="/js/jquery-3.4.1.min.js"></script>
 
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
