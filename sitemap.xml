@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.2hao.cc/2017/02/06/di-tie-jian-wen/</loc>
+    
+    <lastmod>2025-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.2hao.cc/2018/02/10/dianfei/</loc>
     
     <lastmod>2025-09-14</lastmod>
@@ -1145,15 +1154,6 @@
   </url>
   
   <url>
-    <loc>http://blog.2hao.cc/2017/02/06/di-tie-jian-wen/</loc>
-    
-    <lastmod>2022-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.2hao.cc/2017/02/12/da-xue-gan-ga-shi/</loc>
     
     <lastmod>2022-09-20</lastmod>
@@ -1444,7 +1444,7 @@
 
   <url>
     <loc>http://blog.2hao.cc/</loc>
-    <lastmod>2025-09-14</lastmod>
+    <lastmod>2025-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
