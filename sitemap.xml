@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.2hao.cc/2018/08/06/chuanjiang/</loc>
-    
-    <lastmod>2025-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.2hao.cc/2018/04/20/create-blog/</loc>
     
     <lastmod>2025-09-16</lastmod>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>http://blog.2hao.cc/2016/06/30/about/</loc>
+    
+    <lastmod>2025-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2018/08/06/chuanjiang/</loc>
     
     <lastmod>2025-09-16</lastmod>
     
