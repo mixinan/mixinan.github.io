@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.2hao.cc/2018/08/06/chuanjiang/</loc>
+    <loc>http://blog.2hao.cc/2017/02/06/di-tie-jian-wen/</loc>
     
     <lastmod>2025-09-16</lastmod>
     
@@ -12,6 +12,33 @@
   
   <url>
     <loc>http://blog.2hao.cc/2018/04/20/create-blog/</loc>
+    
+    <lastmod>2025-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2016/12/20/2016-nianhui-jiemu/</loc>
+    
+    <lastmod>2025-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2018/05/01/clean-hair/</loc>
+    
+    <lastmod>2025-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2018/08/06/chuanjiang/</loc>
     
     <lastmod>2025-09-16</lastmod>
     
@@ -30,15 +57,6 @@
   
   <url>
     <loc>http://blog.2hao.cc/about/index.html</loc>
-    
-    <lastmod>2025-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.2hao.cc/2017/02/06/di-tie-jian-wen/</loc>
     
     <lastmod>2025-09-16</lastmod>
     
@@ -66,15 +84,6 @@
   
   <url>
     <loc>http://blog.2hao.cc/2018/04/23/diss-the-world/</loc>
-    
-    <lastmod>2025-09-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.2hao.cc/2018/05/01/clean-hair/</loc>
     
     <lastmod>2025-09-14</lastmod>
     
@@ -1344,15 +1353,6 @@
   
   <url>
     <loc>http://blog.2hao.cc/2017/08/10/about-ui-design/</loc>
-    
-    <lastmod>2022-09-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.2hao.cc/2016/12/20/2016-nianhui-jiemu/</loc>
     
     <lastmod>2022-09-20</lastmod>
     
