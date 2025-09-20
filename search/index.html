@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!--  -->
   
-  <title>归档: 2019/12 | 万码千钧Blog</title>
+  <title>万码千钧Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
 <link rel="stylesheet" href="/css/style.css">
@@ -31,44 +31,131 @@
   </div>
 </div>
       <div class="outer">
-        <section id="main">
+        <section id="main"><div class="search-result">
+  <h1>搜索结果</h1>
+  <div id="search-results"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');
   
+  // 添加调试信息
+  console.log('搜索关键词:', query);
   
+  if (query) {
+    // 显示正在搜索的提示
+    document.getElementById('search-results').innerHTML = '<p>正在搜索 "' + query + '"...</p>';
     
+    fetch('/search.xml')
+      .then(response => {
+        console.log('fetch响应状态:', response.status);
+        if (!response.ok) {
+          throw new Error('网络响应错误: ' + response.status);
+        }
+        return response.text();
+      })
+      .then(str => {
+        console.log('获取到的XML内容长度:', str.length);
+        // 检查返回的内容是否为空
+        if (!str) {
+          throw new Error('搜索文件为空');
+        }
+        
+        // 解析XML
+        const parser = new DOMParser();
+        const data = parser.parseFromString(str, "text/xml");
+        
+        // 检查解析是否成功
+        if (data.getElementsByTagName('parsererror').length > 0) {
+          console.error('XML解析错误:', data.getElementsByTagName('parsererror')[0].textContent);
+          throw new Error('XML解析错误');
+        }
+        
+        // 获取所有文章条目
+        const entries = data.getElementsByTagName('entry');
+        console.log('总文章数:', entries.length);
+        
+        const results = [];
+        const lowerQuery = query.toLowerCase();
+        
+        // 遍历所有文章
+        Array.from(entries).forEach((entry, index) => {
+          try {
+            const titleElement = entry.getElementsByTagName('title')[0];
+            const contentElement = entry.getElementsByTagName('content')[0];
+            const urlElement = entry.getElementsByTagName('url')[0];
+            
+            const title = titleElement ? titleElement.textContent : '';
+            const content = contentElement ? contentElement.textContent : '';
+            const url = urlElement ? urlElement.textContent : '';
+            
+            console.log('检查文章 ' + index + ':', title);
+            
+            // 清理内容，移除HTML标签和特殊字符
+            const cleanTitle = title.toLowerCase().replace(/<[^>]*>/g, '').trim();
+            const cleanContent = content.toLowerCase().replace(/<[^>]*>/g, '').trim();
+            
+            console.log('标题:', cleanTitle);
+            console.log('内容预览:', cleanContent.substring(0, 100));
+            
+            // 检查标题或内容是否包含搜索词
+            if (cleanTitle.includes(lowerQuery) || cleanContent.includes(lowerQuery)) {
+              results.push({
+                title: title,
+                content: content,
+                url: url
+              });
+              console.log('匹配文章: ' + title);
+            }
+          } catch (e) {
+            console.error('处理文章 ' + index + ' 时出错:', e);
+          }
+        });
+        
+        console.log('搜索完成，找到 ' + results.length + ' 个结果');
+        displayResults(results, query);
+      })
+      .catch(error => {
+        console.error('搜索请求失败:', error);
+        document.getElementById('search-results').innerHTML = '<p>搜索请求失败：' + error.message + '</p>';
+      });
+  } else {
+    document.getElementById('search-results').innerHTML = '<p>请输入搜索关键词</p>';
+  }
+});
+
+function displayResults(results, query) {
+  const resultsContainer = document.getElementById('search-results');
+  
+  if (results.length === 0) {
+    resultsContainer.innerHTML = '<div class="search-result-info">未找到与 "' + query + '" 相关的结果。</div>';
+    return;
+  }
+  
+  let html = '<div class="search-result-info">找到 ' + results.length + ' 个相关结果：</div>';
+  results.forEach(result => {
+    // 提取内容预览
+    const preview = result.content.length > 200 ? 
+      result.content.substring(0, 200) + '...' : result.content;
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
+    // 清理标题和内容中的HTML标签
+    const cleanTitle = result.title.replace(/<[^>]*>/g, '').trim();
+    const cleanPreview = preview.replace(/<[^>]*>/g, '').trim();
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-  <a href="/2019/12/31/2019/" class="archive-article-date">
-    <time class="dt-published" datetime="2019-12-31T14:32:09.000Z" itemprop="datePublished">12月 31</time>
-  </a>
-
-      
+    html += `
+      <div class="search-result-item">
+        <h2><a href="${result.url}" target="_blank">${cleanTitle}</a></h2>
+        <div class="search-result-content">${cleanPreview}</div>
+        <a class="search-result-url" href="${result.url}" target="_blank">${result.url}</a>
+      </div>
+    `;
+  });
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/31/2019/">2019年总结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-</section>
+  resultsContainer.innerHTML = html;
+}
+</script></section>
         
           <aside id="sidebar">
   
