@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('标题:', cleanTitle);
             console.log('内容预览:', cleanContent.substring(0, 100));
             
-            // 检查标题或内容是否包含搜索词
+            // 检查标题或内容是否包含搜索词（改进搜索算法）
             if (cleanTitle.includes(lowerQuery) || cleanContent.includes(lowerQuery)) {
               results.push({
                 title: title,
