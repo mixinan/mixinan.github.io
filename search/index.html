@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 显示正在搜索的提示
     document.getElementById('search-results').innerHTML = '<p>正在搜索 "' + query + '"...</p>';
     
+    // 记录开始时间
+    const startTime = performance.now();
+    
     fetch('/search.xml')
       .then(response => {
         console.log('fetch响应状态:', response.status);
@@ -57,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.text();
       })
       .then(str => {
+        const fetchTime = performance.now();
+        console.log('获取XML耗时:', fetchTime - startTime, 'ms');
         console.log('获取到的XML内容长度:', str.length);
         // 检查返回的内容是否为空
         if (!str) {
@@ -80,9 +85,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const results = [];
         const lowerQuery = query.toLowerCase();
         
-        // 遍历所有文章
-        Array.from(entries).forEach((entry, index) => {
+        // 限制搜索的文章数量，提升性能
+        const maxEntries = Math.min(entries.length, 100);
+        console.log('搜索文章数量限制:', maxEntries);
+        
+        // 遍历文章进行搜索（性能优化版本）
+        for (let index = 0; index < maxEntries; index++) {
           try {
+            const entry = entries[index];
             const titleElement = entry.getElementsByTagName('title')[0];
             const contentElement = entry.getElementsByTagName('content')[0];
             const urlElement = entry.getElementsByTagName('url')[0];
@@ -91,29 +101,38 @@ document.addEventListener('DOMContentLoaded', function() {
             const content = contentElement ? contentElement.textContent : '';
             const url = urlElement ? urlElement.textContent : '';
             
-            console.log('检查文章 ' + index + ':', title);
+            // 性能优化：只在标题或内容长度合理时进行搜索
+            if (title.length > 0 || content.length > 0) {
+              // 进一步性能优化：只搜索前5000个字符的内容
+              const searchContent = content.length > 5000 ? content.substring(0, 5000) : content;
+              
+              // 清理内容，移除HTML标签和特殊字符
+              const cleanTitle = title.toLowerCase().replace(/<[^>]*>/g, '').trim();
+              const cleanContent = searchContent.toLowerCase().replace(/<[^>]*>/g, '').trim();
+              
+              // 检查标题或内容是否包含搜索词（性能优化版本）
+              if (cleanTitle.includes(lowerQuery) || cleanContent.includes(lowerQuery)) {
+                results.push({
+                  title: title,
+                  content: content,
+                  url: url
+                });
+                console.log('匹配文章: ' + title);
+              }
+            }
             
-            // 清理内容，移除HTML标签和特殊字符
-            const cleanTitle = title.toLowerCase().replace(/<[^>]*>/g, '').trim();
-            const cleanContent = content.toLowerCase().replace(/<[^>]*>/g, '').trim();
-            
-            console.log('标题:', cleanTitle);
-            console.log('内容预览:', cleanContent.substring(0, 100));
-            
-            // 检查标题或内容是否包含搜索词（改进搜索算法）
-            if (cleanTitle.includes(lowerQuery) || cleanContent.includes(lowerQuery)) {
-              results.push({
-                title: title,
-                content: content,
-                url: url
-              });
-              console.log('匹配文章: ' + title);
+            // 如果已经找到足够多的结果，提前结束搜索
+            if (results.length >= 20) {
+              console.log('已找到足够多的结果，提前结束搜索');
+              break;
             }
           } catch (e) {
             console.error('处理文章 ' + index + ' 时出错:', e);
           }
-        });
+        }
         
+        const searchTime = performance.now();
+        console.log('搜索耗时:', searchTime - fetchTime, 'ms');
         console.log('搜索完成，找到 ' + results.length + ' 个结果');
         displayResults(results, query);
       })
@@ -136,7 +155,7 @@ function displayResults(results, query) {
   
   let html = '<div class="search-result-info">找到 ' + results.length + ' 个相关结果：</div>';
   results.forEach(result => {
-    // 提取内容预览
+    // 提取内容预览（性能优化：限制预览长度）
     const preview = result.content.length > 200 ? 
       result.content.substring(0, 200) + '...' : result.content;
     
