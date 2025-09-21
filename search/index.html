@@ -153,7 +153,7 @@ function displayResults(results, query) {
     return;
   }
   
-  let html = '<div class="search-result-info">找到 ' + results.length + ' 个相关结果：</div>';
+  let html = '<div class="search-result-info">找到 ' + results.length + ' 个与 "' + query + '" 有关的结果：</div>';
   results.forEach(result => {
     // 提取内容预览（性能优化：限制预览长度）
     const preview = result.content.length > 200 ? 
