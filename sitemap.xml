@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.2hao.cc/2016/03/06/about-dian-tai/</loc>
+    
+    <lastmod>2026-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2016/02/29/go-to-work/</loc>
+    
+    <lastmod>2026-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.2hao.cc/2025/01/25/2024zongjie/</loc>
+    
+    <lastmod>2026-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.2hao.cc/2025/12/31/my2025/</loc>
     
     <lastmod>2026-02-18</lastmod>
@@ -140,15 +167,6 @@
     <loc>http://blog.2hao.cc/2018/10/20/zheng-ze/</loc>
     
     <lastmod>2025-09-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.2hao.cc/2025/01/25/2024zongjie/</loc>
-    
-    <lastmod>2025-02-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1453,7 +1471,7 @@
 
   <url>
     <loc>http://blog.2hao.cc/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
